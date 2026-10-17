@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Great_Vibes } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { site } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,8 +22,19 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: "Creation for Passion",
-  description: "Oggetti fatti a mano per la casa.",
+  metadataBase: new URL(site.url),
+  title: {
+    default: `${site.name} | Allestimenti per eventi a ${site.city} e creazioni handmade`,
+    template: `%s | ${site.name}`,
+  },
+  description: site.description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "it_IT",
+    siteName: site.name,
+    images: "/cforp.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -33,6 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex h-dvh flex-col overflow-hidden">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
