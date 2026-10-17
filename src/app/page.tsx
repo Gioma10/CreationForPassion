@@ -40,9 +40,9 @@ export default function Home() {
           </Button>
         </div>
 
-        <figure className="w-full md:w-64">
+        <figure className="w-full max-w-64 justify-self-center md:w-64">
           {/* TODO: replace with next/image of the featured piece */}
-          <div className="flex aspect-[7/10] items-center justify-center rounded-2xl bg-muted text-muted-foreground">
+          <div className="flex aspect-7/10 items-center justify-center rounded-2xl bg-muted text-muted-foreground">
             <ImageIcon className="size-8" />
           </div>
           <figcaption className="mt-4 flex items-center gap-3 text-xs font-semibold">
@@ -52,10 +52,14 @@ export default function Home() {
         </figure>
       </section>
 
-      <section className="relative flex-1 overflow-hidden pt-32 pb-16">
+      <section className="relative flex-1 overflow-hidden pt-[max(6rem,10vw)] pb-16">
         <div
           aria-hidden
-          className="absolute -inset-x-[10%] top-0 h-[200%] rounded-[50%] bg-rose"
+          className="absolute inset-x-[-10%] top-0 h-[40vw] rounded-[50%] bg-rose"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-x-0 top-[20vw] bottom-0 bg-rose"
         />
         <ul className="relative mx-auto flex max-w-3xl flex-wrap justify-around gap-6 px-6">
           {featured.map((product) => (

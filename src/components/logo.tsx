@@ -1,20 +1,24 @@
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-// Placeholder until the real "Creation for Passion" artwork is added to /public.
 export function Logo({ className }: { className?: string }) {
   return (
     <Link
       href="/"
-      aria-label="Creation for Passion, home"
       className={cn(
-        "flex size-24 flex-col items-center justify-center rounded-full bg-blush font-script leading-none text-[#8c1c3a] ring-4 ring-background",
+        "relative block size-20 overflow-hidden rounded-full bg-blush ring-4 ring-background md:size-24",
         className
       )}
     >
-      <span className="text-2xl">Creation</span>
-      <span className="text-xs">for</span>
-      <span className="text-2xl">Passion</span>
+      <Image
+        src="/cforp.png"
+        alt="Creation for Passion"
+        fill
+        sizes="96px"
+        priority
+        className="object-contain"
+      />
     </Link>
   );
 }
