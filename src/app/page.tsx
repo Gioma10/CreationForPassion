@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { ImageIcon } from "lucide-react";
+import type { Organization, WithContext } from "schema-dts";
+import { JsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { site, socials } from "@/lib/site";
 
-const jsonLd = {
+const jsonLd: WithContext<Organization> = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "Organization",
   name: site.name,
   description: site.description,
   url: site.url,
@@ -44,12 +46,7 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 export default function Home() {
   return (
     <main className="flex min-h-0 flex-1 flex-col">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
-        }}
-      />
+      <JsonLd data={jsonLd} />
 
       <section className="mx-auto grid min-h-0 w-full max-w-5xl flex-1 @container-size grid-rows-[minmax(0,1fr)] gap-10 px-6 pt-10 pb-6 md:grid-cols-[1fr_auto]">
         <div className="flex min-h-0 flex-col">

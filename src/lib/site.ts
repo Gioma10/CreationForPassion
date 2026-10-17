@@ -26,7 +26,7 @@ export const pages = [
       "Allestimenti per matrimoni, battesimi, comunioni, compleanni e feste a Catania, progettati e realizzati su misura.",
   },
   {
-    href: "/homemade",
+    href: "/handmade",
     label: "Artigianato",
     title: "Creazioni artigianali fatte a mano",
     description:
