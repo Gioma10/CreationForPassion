@@ -8,10 +8,10 @@ export type Product = {
 
 export function ProductCard({ product }: { product: Product }) {
   return (
-    <Card size="sm" className="w-32 gap-2 rounded-2xl ring-0 shadow-sm">
+    <Card size="sm" className="w-28 gap-2 rounded-2xl md:w-32 ring-0 shadow-sm">
       <CardContent className="space-y-2">
         {/* TODO: replace with next/image once product photos are in /public */}
-        <div className="flex aspect-[5/3] items-center justify-center rounded-lg bg-muted text-muted-foreground">
+        <div className="flex aspect-5/3 items-center justify-center rounded-lg bg-muted text-muted-foreground">
           <ImageIcon className="size-5" />
         </div>
         <div>

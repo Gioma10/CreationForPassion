@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Logo } from "@/components/logo";
 
 const leftLinks = [
-  { href: "/job", label: "Job" },
-  { href: "/lavori", label: "I miei lavori" },
+  { href: "/Allestimenti", label: "Allestimenti" },
+  { href: "/homemade", label: "Artigianato" },
 ];
 
 const rightLinks = [
@@ -24,8 +24,8 @@ function NavLink({ href, label }: { href: string; label: string }) {
 
 export function Navbar() {
   return (
-    <header className="pointer-events-none sticky top-0 z-50 flex justify-center px-4 pt-8">
-      <nav className="pointer-events-auto grid h-12 w-full max-w-xl grid-cols-[1fr_auto_1fr] items-center rounded-full bg-blush px-3 md:px-6">
+    <header className="relative z-50 flex shrink-0 justify-center px-4 pt-8">
+      <nav className="grid h-12 w-full max-w-xl grid-cols-[1fr_auto_1fr] items-center rounded-full bg-blush px-3 md:px-6">
         <div className="flex justify-around gap-3">
           {leftLinks.map((link) => (
             <NavLink key={link.href} {...link} />

@@ -20,9 +20,9 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 
 export default function Home() {
   return (
-    <main className="flex flex-1 flex-col">
-      <section className="mx-auto grid w-full max-w-5xl gap-10 px-6 pt-12 pb-16 md:grid-cols-[1fr_auto]">
-        <div className="flex flex-col">
+    <main className="flex min-h-0 flex-1 flex-col">
+      <section className="mx-auto grid min-h-0 w-full max-w-5xl flex-1 @container-size grid-rows-[minmax(0,1fr)] gap-10 px-6 pt-10 pb-6 md:grid-cols-[1fr_auto]">
+        <div className="flex min-h-0 flex-col">
           <Eyebrow>New arrivals</Eyebrow>
           <h1 className="mt-4 text-4xl tracking-tight md:text-5xl">
             Handmade stuff
@@ -40,7 +40,8 @@ export default function Home() {
           </Button>
         </div>
 
-        <figure className="w-full max-w-64 justify-self-center md:w-64">
+        {/* Width follows the section height (cqh) so the 7:10 photo always fits without scrolling. */}
+        <figure className="hidden w-[min(16rem,calc((100cqh-2rem)*0.7))] flex-col md:flex">
           {/* TODO: replace with next/image of the featured piece */}
           <div className="flex aspect-7/10 items-center justify-center rounded-2xl bg-muted text-muted-foreground">
             <ImageIcon className="size-8" />
@@ -52,7 +53,7 @@ export default function Home() {
         </figure>
       </section>
 
-      <section className="relative flex-1 overflow-hidden pt-[max(6rem,10vw)] pb-16">
+      <section className="relative flex h-[clamp(11rem,32dvh,17rem)] shrink-0 items-end overflow-hidden pb-[4dvh]">
         <div
           aria-hidden
           className="absolute inset-x-[-10%] top-0 h-[40vw] rounded-[50%] bg-rose"
@@ -61,7 +62,7 @@ export default function Home() {
           aria-hidden
           className="absolute inset-x-0 top-[20vw] bottom-0 bg-rose"
         />
-        <ul className="relative mx-auto flex max-w-3xl flex-wrap justify-around gap-6 px-6">
+        <ul className="relative mx-auto flex w-full max-w-3xl justify-around gap-3 px-4">
           {featured.map((product) => (
             <li key={product.name}>
               <ProductCard product={product} />
