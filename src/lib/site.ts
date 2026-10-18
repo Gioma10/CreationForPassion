@@ -48,6 +48,33 @@ export const pages = [
   },
 ] as const;
 
+export type Service = {
+  title: string;
+  description: string;
+  href?: string;
+};
+
+// TODO: add a real photo for each service (next/image `src` + descriptive alt).
+export const services = [
+  {
+    title: "Allestimenti",
+    description:
+      "Hai bisogno di un'atmosfera pensata per un evento a Catania? Iniziamo da qui.",
+    href: "/allestimenti",
+  },
+  {
+    title: "Artigianato",
+    description:
+      "Cerchi qualcosa fatto a mano? Iniziamo dalle creazioni che raccontano una storia.",
+    href: "/handmade",
+  },
+  {
+    title: "Prodotti digitali",
+    description:
+      "Hai bisogno di qualcosa pensato per il digitale? Iniziamo dalle proposte più adatte.",
+  },
+] as const satisfies readonly Service[];
+
 export function pageByHref(href: (typeof pages)[number]["href"]) {
   return pages.find((page) => page.href === href)!;
 }

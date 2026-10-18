@@ -6,11 +6,11 @@ export function Footer() {
     <footer className="relative flex h-[clamp(9rem,26dvh,14rem)] shrink-0 items-end overflow-hidden pb-[3dvh]">
       <div
         aria-hidden
-        className="absolute inset-x-[-10%] top-0 h-[40vw] rounded-[50%] bg-rose"
+        className="absolute inset-x-[-10%] top-0 h-[40vw] rounded-[50%] bg-blush"
       />
       <div
         aria-hidden
-        className="absolute inset-x-0 top-[20vw] bottom-0 bg-rose"
+        className="absolute inset-x-0 top-[20vw] bottom-0 bg-blush"
       />
 
       <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center gap-3 px-4 text-center">
