@@ -5,7 +5,7 @@ export function Logo({ className }: { className?: string }) {
   return (
     <span
       className={cn(
-        "relative block size-20 overflow-hidden rounded-full bg-blush ring-4 ring-background md:size-24",
+        "relative block size-14 overflow-hidden rounded-full bg-blush ring-2 ring-background md:size-16",
         className
       )}
     >
@@ -13,7 +13,7 @@ export function Logo({ className }: { className?: string }) {
         src="/cforp.png"
         alt="Creation for Passion"
         fill
-        sizes="96px"
+        sizes="64px"
         priority
         className="object-contain"
       />

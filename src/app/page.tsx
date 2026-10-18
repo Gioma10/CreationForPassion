@@ -1,6 +1,8 @@
 import type { Organization, WithContext } from "schema-dts";
 import { JsonLd } from "@/components/JsonLd";
+import { Footer } from "@/components/Footer";
 import { ServicesHero } from "@/components/ServicesHero";
+import { SiteHeader } from "@/components/SiteHeader";
 import { site, socials } from "@/lib/site";
 
 const jsonLd: WithContext<Organization> = {
@@ -36,7 +38,12 @@ export default function Home() {
   return (
     <>
       <JsonLd data={jsonLd} />
-      <ServicesHero />
+      {/* The home is a single screen: the hero's card sizes and the rising arc depend on this fixed height. */}
+      <div className="flex h-dvh flex-col overflow-hidden">
+        <SiteHeader />
+        <ServicesHero />
+        <Footer />
+      </div>
     </>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
@@ -8,6 +9,7 @@ import { Flip } from "gsap/Flip";
 import { useGSAP } from "@gsap/react";
 import { ArrowLeft, ArrowRight, ArrowUpRight, ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { HOME_RESET_EVENT } from "@/lib/home-reset";
 import { cn } from "@/lib/utils";
 import { services, type Service } from "@/lib/site";
 
@@ -28,7 +30,14 @@ function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
+// Arriving from a link (e.g. the logo) starts again from the deck; browser back/forward keeps the view
+// the visitor left, since bfcacheId only changes on push/replace navigations.
 export function ServicesHero() {
+  const { bfcacheId } = useRouter();
+  return <ServicesHeroView key={bfcacheId} />;
+}
+
+function ServicesHeroView() {
   const [view, setView] = useState<View>("deck");
   const root = useRef<HTMLElement>(null);
   const cards = useRef<HTMLDivElement[]>([]);
@@ -207,8 +216,13 @@ export function ServicesHero() {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") show("deck");
     };
+    const onHomeReset = () => show("deck");
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    window.addEventListener(HOME_RESET_EVENT, onHomeReset);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener(HOME_RESET_EVENT, onHomeReset);
+    };
   });
 
   const isDeck = view === "deck";
