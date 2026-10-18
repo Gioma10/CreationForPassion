@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Flower2, Heart, Ruler } from "lucide-react";
+import teamPhoto from "@/assets/photos/team-bomboniere-evento.jpg";
 import {
   CtaBand,
   OutlineLink,
   PageHero,
   PageShell,
+  Photo,
   PhotoPlaceholder,
   SectionHeading,
   cardShadow,
@@ -53,7 +55,14 @@ export default function ChiSiamoPage() {
             className="absolute inset-0 -translate-x-4 translate-y-3 -rotate-6 rounded-[2rem] bg-blush"
           />
           <div className={`relative rounded-[2rem] bg-card p-3 ${cardShadow}`}>
-            <PhotoPlaceholder className="aspect-4/5 rounded-[1.5rem]" />
+            <Photo
+              cover
+              src={teamPhoto}
+              sizes="(min-width: 768px) 45rem, 170vw"
+              alt="Il team di Creation for Passion sistema le bomboniere fatte a mano su un tavolo durante un evento"
+              position="78% center"
+              className="aspect-4/5 rounded-[1.5rem]"
+            />
           </div>
         </div>
       </section>

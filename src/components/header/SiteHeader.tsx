@@ -24,7 +24,7 @@ export function SiteHeader() {
           hidden && "md:-translate-y-[calc(100%+1.5rem)]",
         )}
       >
-        <div className="mx-auto flex w-full max-w-5xl items-center px-5 md:px-6">
+        <div className="mx-auto flex w-full max-w-5xl items-center px-5 md:justify-center md:px-6">
           <MobileNav showTitle={scrolled} />
           <DesktopNav hidden={hidden} />
         </div>

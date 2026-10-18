@@ -14,7 +14,7 @@ export function Logo({ className }: { className?: string }) {
         alt="Creation for Passion"
         fill
         sizes="64px"
-        priority
+        loading="eager"
         className="object-contain"
       />
     </span>

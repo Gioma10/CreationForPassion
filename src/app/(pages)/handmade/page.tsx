@@ -5,11 +5,16 @@ import {
   OutlineLink,
   PageHero,
   PageShell,
+  Photo,
   PhotoPlaceholder,
   SectionHeading,
   WhatsAppButton,
   cardShadow,
 } from "@/components/page-parts";
+import annaffiatoio from "@/assets/photos/annaffiatoio-gesso-fiori-secchi.jpg";
+import barattoloGesso from "@/assets/photos/barattolo-gesso-fiocco.jpg";
+import borsetta from "@/assets/photos/borsetta-fiori-cera-busto.jpg";
+import palloncini from "@/assets/photos/palloncini-70-anni-limoni.jpg";
 import { pageByHref } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -35,14 +40,23 @@ const categories = [
     tags: ["Matrimoni", "Battesimi", "Comunioni", "Lauree"],
   },
   {
-    title: "Decorazioni floreali",
-    text: "Composizioni e dettagli floreali per la casa, per una ricorrenza o per un regalo speciale.",
-    tags: ["Casa", "Ricorrenze", "Regali"],
+    title: "Candele e gesso",
+    text: "Candele e oggetti in gesso fatti a mano, da regalare, da tenere in casa o da usare come bomboniera.",
+    tags: ["Candele", "Gesso", "Bomboniere", "Regali"],
+    photo: {
+      src: barattoloGesso,
+      alt: "Barattolo in gesso bianco con fiocco verde e fiori decorativi fatti a mano su un runner dorato",
+    },
   },
   {
-    title: "Oggetti per la casa",
-    text: "Pezzi unici per dare alla tua casa un tocco che ti somiglia.",
-    tags: ["Decorazioni", "Pezzi unici"],
+    title: "Composizioni di palloncini",
+    text: "Composizioni di palloncini per feste e ricorrenze, nei colori e nelle forme che scegli tu.",
+    tags: ["Compleanni", "Feste", "Ricorrenze"],
+    photo: {
+      src: palloncini,
+      alt: "Composizione di palloncini verdi con il numero 70 dorato, arco decorato con foglie e limoni e bomboniere coordinate",
+      position: "center 55%",
+    },
   },
   {
     title: "Gadget personalizzati",
@@ -67,15 +81,28 @@ export default function HandmadePage() {
         <PageHero
           eyebrow="Fatto a mano"
           title="Creazioni artigianali che raccontano una storia"
-          intro="Bomboniere, decorazioni floreali, oggetti per la casa e gadget personalizzati: ogni pezzo nasce a mano, con cura, e può essere fatto su misura per te."
+          intro="Bomboniere, candele e gesso, composizioni di palloncini e gadget personalizzati: ogni pezzo nasce a mano, con cura, e può essere fatto su misura per te."
         >
           <WhatsAppButton />
           <OutlineLink href="/come-lavoriamo">Come lavoriamo</OutlineLink>
         </PageHero>
 
         <div className="grid grid-cols-[1.2fr_1fr] grid-rows-2 gap-3 md:gap-4">
-          <PhotoPlaceholder className="row-span-2 aspect-3/5 rounded-[1.75rem] md:aspect-auto" />
-          <PhotoPlaceholder className="aspect-square rounded-[1.75rem]" />
+          <Photo
+            cover
+            src={borsetta}
+            alt="Composizione in una borsetta bianca con busto, farfalla e fiori decorativi fatti a mano nei toni del rosso, con fiori secchi e foglie di palma"
+            sizes="(min-width: 768px) 20rem, 60vw"
+            className="row-span-2 aspect-3/5 rounded-[1.75rem] md:aspect-auto"
+          />
+          <Photo
+            cover
+            src={annaffiatoio}
+            alt="Annaffiatoio in gesso bianco decorato con fiori secchi, ortensie e fiori decorativi fatti a mano"
+            position="center 60%"
+            sizes="(min-width: 768px) 14rem, 45vw"
+            className="aspect-square rounded-[1.75rem]"
+          />
           <PhotoPlaceholder className="aspect-square rounded-[1.75rem] bg-rose/40" />
         </div>
       </section>
@@ -102,7 +129,17 @@ export default function HandmadePage() {
             className="grid items-center gap-6 md:grid-cols-2 md:gap-14"
           >
             <div className={cn("rounded-[2rem] bg-card p-3", cardShadow, i % 2 === 1 && "md:order-2")}>
-              <PhotoPlaceholder className="aspect-4/3 rounded-[1.5rem]" />
+              {category.photo ? (
+                <Photo
+                  src={category.photo.src}
+                  alt={category.photo.alt}
+                  position={category.photo.position}
+                  sizes="(min-width: 768px) 32rem, 100vw"
+                  className="aspect-4/3 rounded-[1.5rem]"
+                />
+              ) : (
+                <PhotoPlaceholder className="aspect-4/3 rounded-[1.5rem]" />
+              )}
             </div>
             <div>
               <span className="text-sm font-semibold text-rose-foreground">

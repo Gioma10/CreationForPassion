@@ -28,7 +28,7 @@ export const pages = [
     href: "/handmade",
     title: "Creazioni artigianali fatte a mano",
     description:
-      "Bomboniere, decorazioni floreali, oggetti per la casa e gadget personalizzati fatti a mano. Spedizioni in Italia e all'estero.",
+      "Bomboniere, candele e gesso, composizioni di palloncini e gadget personalizzati fatti a mano. Spedizioni in Italia e all'estero.",
   },
   {
     href: "/chi-siamo",

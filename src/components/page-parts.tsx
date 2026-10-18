@@ -1,3 +1,4 @@
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, ImageIcon } from "lucide-react";
 import { SocialIcon } from "@/components/social-icon";
@@ -41,6 +42,40 @@ export function PhotoPlaceholder({ className }: { className?: string }) {
   return (
     <div className={cn("flex items-center justify-center bg-blush text-wine/40", className)}>
       <ImageIcon className="size-8" />
+    </div>
+  );
+}
+
+// `cover` is for the above-the-fold photo: loaded eagerly with high priority since it is the page's largest element.
+// `sizes` must account for object-cover: a landscape photo in a narrower frame renders wider than the frame.
+export function Photo({
+  src,
+  alt,
+  sizes,
+  className,
+  position,
+  cover = false,
+}: {
+  src: StaticImageData;
+  alt: string;
+  sizes: string;
+  className?: string;
+  position?: string;
+  cover?: boolean;
+}) {
+  return (
+    <div className={cn("relative overflow-hidden bg-blush", className)}>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        placeholder="blur"
+        loading={cover ? "eager" : "lazy"}
+        fetchPriority={cover ? "high" : undefined}
+        sizes={sizes}
+        className="object-cover"
+        style={{ objectPosition: position }}
+      />
     </div>
   );
 }

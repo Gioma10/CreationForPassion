@@ -26,7 +26,8 @@ const jsonLd: WithContext<Organization> = {
     "Allestimenti per compleanni e feste",
     "Bomboniere fatte a mano",
     "Decorazioni floreali",
-    "Oggetti per la casa fatti a mano",
+    "Candele e oggetti in gesso fatti a mano",
+    "Composizioni di palloncini",
     "Gadget personalizzati",
   ].map((name) => ({
     "@type": "Offer",

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Check } from "lucide-react";
+import allestimentoSposi from "@/assets/photos/allestimento-sposi-arco-cuore.jpg";
 import {
   CtaBand,
   OutlineLink,
   PageHero,
   PageShell,
+  Photo,
   PhotoPlaceholder,
   SectionHeading,
   WhatsAppButton,
@@ -70,7 +72,13 @@ export default function AllestimentiPage() {
             className="absolute inset-0 translate-x-4 translate-y-3 rotate-6 rounded-[2rem] bg-blush shadow-[0_18px_40px_-20px_rgb(60_10_25/0.35)]"
           />
           <div className={`relative rounded-[2rem] bg-card p-3 ${cardShadow}`}>
-            <PhotoPlaceholder className="aspect-4/5 rounded-[1.5rem]" />
+            <Photo
+              cover
+              src={allestimentoSposi}
+              sizes="(min-width: 768px) 24rem, 90vw"
+              alt="Allestimento con arco a cuore dorato e sagoma degli sposi, fiori, confettata, palloncini e lanterne bianche"
+              className="aspect-4/5 rounded-[1.5rem]"
+            />
           </div>
         </div>
       </section>
