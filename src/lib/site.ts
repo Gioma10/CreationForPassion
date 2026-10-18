@@ -51,7 +51,7 @@ export const pages = [
 export type Service = {
   title: string;
   description: string;
-  href?: string;
+  href: string;
 };
 
 // TODO: add a real photo for each service (next/image `src` + descriptive alt).
@@ -72,6 +72,7 @@ export const services = [
     title: "Prodotti digitali",
     description:
       "Hai bisogno di qualcosa pensato per il digitale? Iniziamo dalle proposte più adatte.",
+    href: "/prodotti-digitali",
   },
 ] as const satisfies readonly Service[];
 

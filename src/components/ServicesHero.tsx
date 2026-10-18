@@ -47,7 +47,7 @@ export function ServicesHero() {
     (_, contextSafe) => {
       const syncDraggables = (current: View) => {
         draggables.current.forEach((draggable, i) =>
-          draggable.enabled(current === "deck" && i === order.current[0])
+          draggable.enabled(current === "deck" && i === order.current[0]),
         );
       };
 
@@ -55,7 +55,12 @@ export function ServicesHero() {
         order.current.forEach((cardIndex, depth) => {
           const card = cards.current[cardIndex];
           gsap.set(card, { zIndex: DECK_POSES.length - depth });
-          gsap.to(card, { ...DECK_POSES[depth], duration, ease: "power3.out", overwrite: "auto" });
+          gsap.to(card, {
+            ...DECK_POSES[depth],
+            duration,
+            ease: "power3.out",
+            overwrite: "auto",
+          });
         });
         syncDraggables("deck");
       });
@@ -92,7 +97,11 @@ export function ServicesHero() {
             if (Math.hypot(this.x, this.y) > SWIPE_DISTANCE) {
               sendTopToBack(this.x, this.y);
             } else {
-              gsap.to(this.target, { ...DECK_POSES[0], duration: 0.5, ease: "back.out(1.7)" });
+              gsap.to(this.target, {
+                ...DECK_POSES[0],
+                duration: 0.5,
+                ease: "back.out(1.7)",
+              });
             }
           },
         });
@@ -100,7 +109,9 @@ export function ServicesHero() {
       });
       // Also runs when Next's <Activity> shows the page again after a back navigation:
       // useGSAP reverted everything on hide, while the React state (and `view`) survived.
-      gsap.set(".view-backdrop", { yPercent: view === "grid" ? GRID_BACKDROP_Y : 0 });
+      gsap.set(".view-backdrop", {
+        yPercent: view === "grid" ? GRID_BACKDROP_Y : 0,
+      });
       if (view === "grid") {
         gsap.set(cards.current, { clearProps: "transform,zIndex" });
         syncDraggables("grid");
@@ -110,7 +121,7 @@ export function ServicesHero() {
 
       deck.current = { layout, sendTopToBack, syncDraggables };
     },
-    { scope: root }
+    { scope: root },
   );
 
   function show(next: View) {
@@ -132,7 +143,9 @@ export function ServicesHero() {
         deck.current?.layout(0);
       }
 
-      root.current?.querySelector<HTMLElement>("[data-view-focus]")?.focus({ preventScroll: true });
+      root.current
+        ?.querySelector<HTMLElement>("[data-view-focus]")
+        ?.focus({ preventScroll: true });
 
       const reduced = prefersReducedMotion();
       Flip.from(state, {
@@ -146,7 +159,13 @@ export function ServicesHero() {
           gsap.fromTo(
             elements,
             { opacity: 0, y: 24 },
-            { opacity: 1, y: 0, duration: reduced ? 0 : 0.5, stagger: 0.08, delay: 0.15 }
+            {
+              opacity: 1,
+              y: 0,
+              duration: reduced ? 0 : 0.5,
+              stagger: 0.08,
+              delay: 0.15,
+            },
           ),
       });
       // Opacity, not autoAlpha: visibility:hidden would drop the focus moved above.
@@ -161,7 +180,7 @@ export function ServicesHero() {
           delay: reduced ? 0 : 0.25,
           ease: "power2.out",
           clearProps: "opacity,transform",
-        }
+        },
       );
       gsap.to(".view-backdrop", {
         yPercent: view === "grid" ? GRID_BACKDROP_Y : 0,
@@ -169,7 +188,7 @@ export function ServicesHero() {
         ease: "power3.inOut",
       });
     },
-    { dependencies: [view], scope: root }
+    { dependencies: [view], scope: root },
   );
 
   function onDeckKeyDown(event: React.KeyboardEvent) {
@@ -195,8 +214,10 @@ export function ServicesHero() {
   const isDeck = view === "deck";
 
   return (
-    <main ref={root} className="relative isolate flex min-h-0 flex-1 flex-col">
-      {/* Same width and top curve as the footer arc, parked exactly behind it so it looks like that arc rising. */}
+    <main ref={root} className="relative flex min-h-0 flex-1 flex-col">
+      {/* Same width and top curve as the footer arc, parked exactly behind it so it looks like that arc rising.
+          <main> must not create a stacking context: this stays under the footer arc, while the z-10 section
+          keeps the cards and their shadows above it. */}
       <div
         aria-hidden
         className="view-backdrop absolute inset-x-[-10%] top-full -z-10 h-[130%] rounded-t-[50%_20vw] bg-blush"
@@ -204,10 +225,10 @@ export function ServicesHero() {
 
       <section
         className={cn(
-          "mx-auto min-h-0 w-full max-w-5xl flex-1 px-6",
+          "relative z-10 mx-auto min-h-0 w-full max-w-5xl flex-1 px-6",
           isDeck
             ? "grid grid-rows-[auto_minmax(0,1fr)] items-center gap-8 pt-8 pb-6 md:grid-cols-[1fr_minmax(0,24rem)] md:grid-rows-[minmax(0,1fr)] md:gap-10"
-            : "flex flex-col gap-6 pt-6 pb-6"
+            : "flex flex-col gap-6 pt-6 pb-6",
         )}
       >
         {isDeck ? (
@@ -238,25 +259,23 @@ export function ServicesHero() {
             <button
               type="button"
               onClick={() => show("deck")}
-              className="mb-3 flex cursor-pointer items-center gap-1.5 rounded-full text-xs font-semibold text-wine/80 transition-colors outline-none hover:text-wine focus-visible:ring-2 focus-visible:ring-rose"
+              className="mb-5 flex cursor-pointer items-center gap-1.5 rounded-full text-xs font-semibold text-wine/80 transition-colors outline-none hover:text-wine focus-visible:ring-2 focus-visible:ring-rose"
             >
               <ArrowLeft className="size-3.5" />
               Torna indietro
             </button>
-            <p className="text-xs font-semibold tracking-widest text-wine uppercase">
-              Scegli dove iniziare
+
+            <p className="flex items-center gap-3 text-xs font-semibold tracking-widest text-wine uppercase">
+              Scegli cosa ti serve
+              <span className="h-px w-8 bg-wine/60" />
             </p>
             <h2
               data-view-focus
               tabIndex={-1}
-              className="mt-2 text-[clamp(1.75rem,5dvh,2.5rem)] leading-tight font-bold tracking-tight text-wine outline-none"
+              className="text-[clamp(1.75rem,5dvh,2.5rem)] leading-tight font-bold tracking-tight text-wine outline-none"
             >
               Che cosa stai cercando?
             </h2>
-            <p className="mt-2 text-sm text-foreground/75 md:text-base">
-              Seleziona l&apos;area che ti interessa di più e iniziamo il
-              percorso giusto per te.
-            </p>
           </div>
         )}
 
@@ -274,7 +293,7 @@ export function ServicesHero() {
             "@container-size min-h-0 w-full",
             isDeck
               ? "relative h-full cursor-pointer max-md:hidden rounded-[2rem] outline-none focus-visible:ring-2 focus-visible:ring-rose focus-visible:ring-offset-4"
-              : "flex-1 md:grid md:grid-cols-3 md:items-center md:justify-items-center md:gap-6 max-md:-mx-6 max-md:w-auto max-md:flex max-md:snap-x max-md:snap-mandatory max-md:scroll-px-6 max-md:items-center max-md:gap-4 max-md:overflow-x-auto max-md:px-6 max-md:py-4"
+              : "flex-1 md:grid md:grid-cols-3 md:items-center md:pt-12 md:justify-items-center md:gap-6 max-md:-mx-6 max-md:w-auto max-md:flex max-md:snap-x max-md:snap-mandatory max-md:scroll-px-6 max-md:items-center max-md:gap-4 max-md:overflow-x-auto max-md:px-6 max-md:py-4",
           )}
         >
           {services.map((service, i) => (
@@ -309,8 +328,32 @@ function ServiceCard({
   initialZ: number;
 }) {
   const isDeck = view === "deck";
+  const href = isDeck ? undefined : service.href;
+
+  const face = (
+    <>
+      {/* TODO: replace with next/image once real photos are available. */}
+      <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden rounded-[6cqw] bg-blush text-wine/40">
+        <ImageIcon className="size-[11cqw] transition-transform duration-500 ease-out group-hover:scale-110" />
+      </div>
+      <div className="flex shrink-0 flex-col px-[3cqw] pt-[5cqw] pb-[3cqw]">
+        <h3 className="text-[7cqw] leading-tight font-bold text-wine">{service.title}</h3>
+        <p className="mt-[3cqw] line-clamp-3 text-[4.9cqw] leading-relaxed text-foreground/75">
+          {service.description}
+        </p>
+        <span className="mt-[5cqw] flex items-center gap-[2cqw] text-[4.9cqw] font-semibold text-wine">
+          Inizia da qui
+          <ArrowRight className="size-[5.6cqw] transition-transform duration-300 group-hover:translate-x-1" />
+        </span>
+      </div>
+    </>
+  );
+
+  const faceClass =
+    "flex size-full flex-col overflow-hidden rounded-[9cqw] bg-card p-[4cqw] text-card-foreground shadow-[0_18px_40px_-20px_rgb(60_10_25/0.45)]";
 
   return (
+    // GSAP (Draggable, Flip) owns this element's transform, so hover motion lives on the inner face.
     <div
       ref={ref}
       role={isDeck ? undefined : "listitem"}
@@ -321,37 +364,25 @@ function ServiceCard({
         zIndex: initialZ,
       }}
       className={cn(
-        "flex h-[calc(var(--w)*4/3)] w-(--w) flex-col rounded-[1.75rem] bg-card p-3 text-card-foreground shadow-[0_18px_40px_-20px_rgb(60_10_25/0.45)] select-none",
+        "@container h-[calc(var(--w)*6/5)] w-(--w) select-none",
         isDeck
-          ? "absolute inset-0 right-12 bottom-9 m-auto [--w:min(calc(100cqw-3rem),calc((100cqh-2.25rem)*0.75))]"
-          : "shrink-0 snap-center [--w:min(72cqw,calc(100cqh*0.75))] md:[--w:min(calc((100cqw-3rem)/3),calc(100cqh*0.75))]"
+          ? "absolute inset-0 right-12 bottom-9 m-auto [--w:min(calc(100cqw-3rem),calc((100cqh-2.25rem)*5/6))]"
+          : "shrink-0 snap-center [--w:min(72cqw,calc(100cqh*5/6))] md:[--w:min(calc((100cqw-3rem)/3),calc(100cqh*5/6))]",
       )}
     >
-      {/* TODO: replace with next/image once real photos are available. */}
-      <div className="flex min-h-0 flex-1 items-center justify-center rounded-[1.25rem] bg-blush text-wine/40">
-        <ImageIcon className="size-8" />
-      </div>
-      <div className="flex flex-col px-2 pt-3 pb-1">
-        <h3 className="text-xl leading-tight font-bold text-wine">{service.title}</h3>
-        <p className="mt-1.5 line-clamp-3 text-sm leading-relaxed text-foreground/75">
-          {service.description}
-        </p>
-        {service.href ? (
-          <Link
-            href={service.href}
-            tabIndex={isDeck ? -1 : undefined}
-            className={cn(
-              "mt-3 flex w-fit items-center gap-1.5 rounded-full text-sm font-semibold text-wine outline-none hover:underline focus-visible:ring-2 focus-visible:ring-rose",
-              isDeck && "pointer-events-none"
-            )}
-          >
-            Inizia da qui
-            <ArrowRight className="size-3.5" />
-          </Link>
-        ) : (
-          <span className="mt-3 text-sm font-semibold text-wine/50">Presto disponibile</span>
-        )}
-      </div>
+      {href ? (
+        <Link
+          href={href}
+          className={cn(
+            faceClass,
+            "group outline-none transition-[translate,box-shadow] duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_28px_50px_-20px_rgb(60_10_25/0.55)] focus-visible:-translate-y-2 focus-visible:ring-2 focus-visible:ring-rose focus-visible:ring-offset-4",
+          )}
+        >
+          {face}
+        </Link>
+      ) : (
+        <div className={faceClass}>{face}</div>
+      )}
     </div>
   );
 }

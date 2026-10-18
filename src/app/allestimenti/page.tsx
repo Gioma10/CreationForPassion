@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { ServicePage } from "@/components/ServicePage";
 import { pageByHref } from "@/lib/site";
+import { allestimenti } from "@/lib/service-pages";
 
 const page = pageByHref("/allestimenti");
 
@@ -10,9 +12,5 @@ export const metadata: Metadata = {
 };
 
 export default function AllestimentiPage() {
-  return (
-    <main className="mx-auto min-h-0 w-full max-w-5xl flex-1 overflow-y-auto px-6 py-12">
-      <h1 className="text-4xl tracking-tight">{page.title}</h1>
-    </main>
-  );
+  return <ServicePage content={allestimenti} />;
 }
