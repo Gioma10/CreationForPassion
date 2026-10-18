@@ -42,7 +42,12 @@ export default function ChiSiamoPage() {
   return (
     <PageShell>
       <section className="grid items-center gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-14">
-        <div className="relative mx-auto w-full max-w-sm md:order-2">
+        <PageHero
+          eyebrow="Chi siamo"
+          title="Creare è la nostra passione"
+          intro="Siamo Creation for Passion, un piccolo laboratorio creativo di Catania. Progettiamo allestimenti per eventi e realizziamo a mano creazioni che raccontano una storia: la tua."
+        />
+        <div className="relative mx-auto w-full max-w-sm">
           <div
             aria-hidden
             className="absolute inset-0 -translate-x-4 translate-y-3 -rotate-6 rounded-[2rem] bg-blush"
@@ -51,11 +56,6 @@ export default function ChiSiamoPage() {
             <PhotoPlaceholder className="aspect-4/5 rounded-[1.5rem]" />
           </div>
         </div>
-        <PageHero
-          eyebrow="Chi siamo"
-          title="Creare è la nostra passione"
-          intro="Siamo Creation for Passion, un piccolo laboratorio creativo di Catania. Progettiamo allestimenti per eventi e realizziamo a mano creazioni che raccontano una storia: la tua."
-        />
       </section>
 
       <section className="grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:gap-14">
