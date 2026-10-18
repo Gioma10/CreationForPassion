@@ -1,11 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <Link
-      href="/"
+    <span
       className={cn(
         "relative block size-20 overflow-hidden rounded-full bg-blush ring-4 ring-background md:size-24",
         className
@@ -19,6 +17,6 @@ export function Logo({ className }: { className?: string }) {
         priority
         className="object-contain"
       />
-    </Link>
+    </span>
   );
 }

@@ -15,7 +15,7 @@ export function Footer() {
 
       <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center gap-3 px-4 text-center">
         <h2 className="text-lg font-semibold md:text-xl">
-          Parliamo del tuo evento
+          Dove ci trovi
         </h2>
         <ul className="flex gap-3">
           {socials.map((social) => (
