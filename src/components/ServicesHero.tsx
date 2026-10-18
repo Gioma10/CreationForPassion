@@ -241,7 +241,7 @@ function ServicesHeroView() {
         className={cn(
           "relative z-10 mx-auto min-h-0 w-full max-w-5xl flex-1 px-6",
           isDeck
-            ? "grid grid-rows-[auto_minmax(0,1fr)] items-center gap-8 pt-8 pb-6 md:grid-cols-[1fr_minmax(0,24rem)] md:grid-rows-[minmax(0,1fr)] md:gap-10"
+            ? "grid grid-rows-[auto_minmax(0,1fr)] items-center gap-8 pt-4 pb-6 md:pt-8 md:grid-cols-[1fr_minmax(0,24rem)] md:grid-rows-[minmax(0,1fr)] md:gap-10"
             : "flex flex-col gap-6 pt-6 pb-6",
         )}
       >
@@ -307,7 +307,7 @@ function ServicesHeroView() {
             "@container-size min-h-0 w-full",
             isDeck
               ? "relative h-full cursor-pointer max-md:hidden rounded-[2rem] outline-none focus-visible:ring-2 focus-visible:ring-rose focus-visible:ring-offset-4"
-              : "flex-1 md:grid md:grid-cols-3 md:items-center md:pt-12 md:justify-items-center md:gap-6 max-md:-mx-6 max-md:w-auto max-md:flex max-md:snap-x max-md:snap-mandatory max-md:scroll-px-6 max-md:items-center max-md:gap-4 max-md:overflow-x-auto max-md:px-6 max-md:py-4",
+              : "flex-1 md:grid md:grid-cols-3 md:items-center md:pt-12 md:justify-items-center md:gap-6 max-md:-mx-6 max-md:w-auto max-md:flex max-md:snap-x max-md:snap-mandatory max-md:scroll-px-6 max-md:items-center max-md:gap-4 max-md:overflow-x-auto max-md:px-6 max-md:pt-4 max-md:pb-12",
           )}
         >
           {services.map((service, i) => (

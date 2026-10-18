@@ -2,7 +2,7 @@ import type { Organization, WithContext } from "schema-dts";
 import { JsonLd } from "@/components/JsonLd";
 import { Footer } from "@/components/Footer";
 import { ServicesHero } from "@/components/ServicesHero";
-import { SiteHeader } from "@/components/SiteHeader";
+import { SiteHeader } from "@/components/header/SiteHeader";
 import { site, socials } from "@/lib/site";
 
 const jsonLd: WithContext<Organization> = {

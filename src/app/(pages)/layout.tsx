@@ -1,5 +1,5 @@
 import { Footer } from "@/components/Footer";
-import { SiteHeader } from "@/components/SiteHeader";
+import { SiteHeader } from "@/components/header/SiteHeader";
 
 export default function PagesLayout({ children }: LayoutProps<"/">) {
   return (

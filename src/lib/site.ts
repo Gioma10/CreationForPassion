@@ -20,32 +20,36 @@ export type SocialName = (typeof socials)[number]["name"];
 export const pages = [
   {
     href: "/allestimenti",
-    label: "Allestimenti",
     title: "Allestimenti per eventi a Catania",
     description:
       "Allestimenti per matrimoni, battesimi, comunioni, compleanni e feste a Catania, progettati e realizzati su misura.",
   },
   {
     href: "/handmade",
-    label: "Artigianato",
     title: "Creazioni artigianali fatte a mano",
     description:
       "Bomboniere, decorazioni floreali, oggetti per la casa e gadget personalizzati fatti a mano. Spedizioni in Italia e all'estero.",
   },
   {
     href: "/chi-siamo",
-    label: "Chi siamo",
     title: "Chi siamo",
     description:
       "Creation for Passion: allestimenti per eventi a Catania e creazioni artigianali nate dalla passione per il fatto a mano.",
   },
   {
     href: "/come-lavoriamo",
-    label: "Come lavoriamo",
     title: "Come lavoriamo",
     description:
       "Dal primo contatto al giorno dell'evento: come progettiamo i tuoi allestimenti e realizziamo le creazioni su misura.",
   },
+] as const;
+
+export const navLinks = [
+  { href: "/allestimenti", label: "Allestimenti" },
+  { href: "/handmade", label: "Artigianato" },
+  { href: "/prodotti-digitali", label: "Prodotti digitali" },
+  { href: "/chi-siamo", label: "Chi siamo" },
+  { href: "/come-lavoriamo", label: "Come lavoriamo" },
 ] as const;
 
 export type Service = {

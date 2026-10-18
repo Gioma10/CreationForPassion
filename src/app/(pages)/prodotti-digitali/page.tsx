@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowDownLeft } from "lucide-react";
 import { WhatsAppButton, cardShadow } from "@/components/page-parts";
 import { services } from "@/lib/site";
 
@@ -36,8 +36,8 @@ export default function ProdottiDigitaliPage() {
           <div className="mt-8">
             <WhatsAppButton />
             <p className="flex items-center gap-2 text-sm font-semibold text-wine md:hidden">
-              Scrivici dal pulsante WhatsApp in alto
-              <ArrowUpRight className="size-4" />
+              <ArrowDownLeft className="size-4" />
+              Scrivici dal pulsante WhatsApp in basso a sinistra
             </p>
           </div>
         </div>

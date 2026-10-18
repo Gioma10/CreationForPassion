@@ -72,7 +72,7 @@ export function CtaBand({ title, text }: { title: string; text: string }) {
         <h2 className="text-3xl font-bold tracking-tight">{title}</h2>
         <p className="mt-3 text-background/80">{text}</p>
         <p className="mt-4 text-sm font-semibold md:hidden">
-          Tocca il pulsante WhatsApp in alto a destra.
+          Tocca il pulsante WhatsApp in basso a sinistra.
         </p>
       </div>
       <WhatsAppButton inverted />

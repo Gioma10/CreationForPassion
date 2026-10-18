@@ -30,7 +30,7 @@ export function Footer() {
             </li>
           ))}
         </ul>
-        <p className="text-xs text-foreground/60">
+        <p className="text-xs text-foreground/60 max-md:px-16">
           © {site.name} · Allestimenti a {site.city} · Creazioni handmade
           spedite in Italia e all&apos;estero
         </p>
