@@ -3,7 +3,7 @@ import { site, socials } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="relative flex h-[clamp(9rem,26dvh,14rem)] shrink-0 items-end overflow-hidden pb-[3dvh]">
+    <footer className="relative flex min-h-[clamp(9rem,26dvh,14rem)] shrink-0 items-end overflow-hidden pt-4 pb-[max(3dvh,1rem)]">
       <div
         aria-hidden
         className="absolute inset-x-[-10%] top-0 h-[40vw] rounded-[50%] bg-blush"

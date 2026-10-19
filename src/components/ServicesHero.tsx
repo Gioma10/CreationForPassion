@@ -251,10 +251,10 @@ function ServicesHeroView() {
               Allestimenti & handmade
               <span className="h-px w-8 bg-wine/60" />
             </p>
-            <h1 className="mt-4 max-w-xl text-[clamp(1.75rem,5.5dvh,2.75rem)] leading-tight tracking-tight text-balance text-wine">
+            <h1 className="mt-4 max-w-xl text-[clamp(1.625rem,4.5dvh,2rem)] md:text-[clamp(1.75rem,5.5dvh,2.75rem)] leading-tight tracking-tight text-balance text-wine">
               Allestimenti per eventi a Catania e creazioni fatte a mano
             </h1>
-            <p className="mt-3 max-w-md text-base text-wine/85">
+            <p className="mt-3 max-w-md text-[0.9375rem] text-wine/85 md:text-base">
               Oggetti fatti a mano, piccoli dettagli che raccontano una storia.
               Creazioni da scegliere con il cuore, per dare alla tua casa un
               tocco che ti somiglia.
@@ -304,7 +304,7 @@ function ServicesHeroView() {
           onClick={() => isDeck && !justDragged.current && show("grid")}
           onKeyDown={onDeckKeyDown}
           className={cn(
-            "@container-size min-h-0 w-full",
+            "@container min-h-0 w-full md:@container-size",
             isDeck
               ? "relative h-full cursor-pointer max-md:hidden rounded-[2rem] outline-none focus-visible:ring-2 focus-visible:ring-rose focus-visible:ring-offset-4"
               : "flex-1 md:grid md:grid-cols-3 md:items-center md:pt-12 md:justify-items-center md:gap-6 max-md:-mx-6 max-md:w-auto max-md:flex max-md:snap-x max-md:snap-mandatory max-md:scroll-px-6 max-md:items-center max-md:gap-4 max-md:overflow-x-auto max-md:px-6 max-md:pt-4 max-md:pb-12",
@@ -381,7 +381,7 @@ function ServiceCard({
         "@container h-[calc(var(--w)*6/5)] w-(--w) select-none",
         isDeck
           ? "absolute inset-0 right-12 bottom-9 m-auto [--w:min(calc(100cqw-3rem),calc((100cqh-2.25rem)*5/6))]"
-          : "shrink-0 snap-center [--w:min(72cqw,calc(100cqh*5/6))] md:[--w:min(calc((100cqw-3rem)/3),calc(100cqh*5/6))]",
+          : "shrink-0 snap-center [--w:72cqw] md:[--w:min(calc((100cqw-3rem)/3),calc(100cqh*5/6))]",
       )}
     >
       {href ? (

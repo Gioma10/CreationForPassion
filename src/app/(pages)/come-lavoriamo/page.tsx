@@ -22,8 +22,8 @@ const steps = [
     text: "Parliamo della data, dello stile, dei colori e di cosa hai in mente. Se vuoi, mandaci foto e ispirazioni.",
   },
   {
-    title: "Ti facciamo una proposta",
-    text: "Prepariamo una proposta su misura con idee, materiali e preventivo. La sistemiamo insieme finché non ti convince.",
+    title: "Ti diamo qualche idea",
+    text: "Ti raccontiamo come immaginiamo il tuo evento: idee, colori e materiali. Li definiamo insieme finché non ti convincono.",
   },
   {
     title: "Realizziamo",
@@ -48,9 +48,9 @@ const faqs = [
       "Sì, è quello che facciamo più volentieri: nomi, date, colori e materiali si scelgono insieme.",
   },
   {
-    question: "Come ricevo un preventivo?",
+    question: "Come posso avere informazioni?",
     answer:
-      "Scrivici su WhatsApp con il tipo di evento, la data e un'idea dello stile che ti piace: ti rispondiamo con una proposta su misura.",
+      "Scrivici su WhatsApp o sui social con il tipo di evento, la data e un'idea dello stile che ti piace: ti rispondiamo per ogni dubbio.",
   },
 ];
 

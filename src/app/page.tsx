@@ -20,27 +20,15 @@ const jsonLd: WithContext<Organization> = {
   },
   areaServed: site.city,
   sameAs: socials.map((social) => social.href),
-  makesOffer: [
-    "Allestimenti per matrimoni",
-    "Allestimenti per battesimi e comunioni",
-    "Allestimenti per compleanni e feste",
-    "Bomboniere fatte a mano",
-    "Decorazioni floreali",
-    "Candele e oggetti in gesso fatti a mano",
-    "Composizioni di palloncini",
-    "Gadget personalizzati",
-  ].map((name) => ({
-    "@type": "Offer",
-    itemOffered: { "@type": "Service", name },
-  })),
 };
 
 export default function Home() {
   return (
     <>
       <JsonLd data={jsonLd} />
-      {/* The home is a single screen: the hero's card sizes and the rising arc depend on this fixed height. */}
-      <div className="flex h-dvh flex-col overflow-hidden">
+      {/* On desktop the home is a single screen: the deck's card sizes and the rising arc depend on this fixed height.
+          On mobile it grows with the content, so larger system font sizes don't push it under the footer. */}
+      <div className="flex min-h-dvh flex-col overflow-hidden md:h-dvh">
         <SiteHeader />
         <ServicesHero />
         <Footer />

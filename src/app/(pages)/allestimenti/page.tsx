@@ -141,7 +141,7 @@ export default function AllestimentiPage() {
 
       <CtaBand
         title="Raccontaci il tuo evento"
-        text="Scrivici su WhatsApp: ti rispondiamo con qualche idea e un preventivo su misura."
+        text="Scrivici su WhatsApp: raccontaci la tua idea e ti rispondiamo per ogni informazione."
       />
     </PageShell>
   );

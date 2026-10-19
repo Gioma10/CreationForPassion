@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ArrowDownLeft } from "lucide-react";
 import { WhatsAppButton, cardShadow } from "@/components/page-parts";
 import { services } from "@/lib/site";
 
@@ -33,12 +32,8 @@ export default function ProdottiDigitaliPage() {
             È una novità e la stiamo costruendo insieme a voi. Ti serve qualcosa di digitale per il tuo
             evento o per la tua attività? Scrivici e ne parliamo.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 max-md:hidden">
             <WhatsAppButton />
-            <p className="flex items-center gap-2 text-sm font-semibold text-wine md:hidden">
-              <ArrowDownLeft className="size-4" />
-              Scrivici dal pulsante WhatsApp in basso a sinistra
-            </p>
           </div>
         </div>
       </section>
