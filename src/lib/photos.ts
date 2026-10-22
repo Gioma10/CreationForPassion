@@ -12,13 +12,12 @@ import barattoloGesso from "@/assets/photos/artigianato/barattolo-gesso-fiocco.j
 import borsetta from "@/assets/photos/artigianato/borsetta-fiori-cera-busto.jpg";
 import candeleSucculente from "@/assets/photos/artigianato/candele-succulente-vaso-gesso.jpg";
 import fioccoNascita from "@/assets/photos/artigianato/fiocco-nascita-azzurro-nome.jpg";
-import palloncini70 from "@/assets/photos/artigianato/palloncini-70-anni-limoni.jpg";
 import labCandelaEtichetta from "@/assets/photos/chi-siamo/laboratorio-candela-etichetta.jpg";
 import labConfezioneRegalo from "@/assets/photos/chi-siamo/laboratorio-confezione-regalo-nastro.jpg";
 import labScatoleCandele from "@/assets/photos/chi-siamo/laboratorio-scatole-candele.jpg";
 import labTavoloFiocco from "@/assets/photos/chi-siamo/laboratorio-tavolo-fiocco-cerchio.jpg";
 import team from "@/assets/photos/chi-siamo/team-bomboniere-evento.jpg";
-import genderReveal from "@/assets/photos/eventi/palloncini-gender-reveal-bebe.jpg";
+import compleanno10Corona from "@/assets/photos/eventi/palloncini-compleanno-10-corona.jpg";
 
 // Each id's alt text lives under `photos.<id>` in messages/*.json.
 export const photos = {
@@ -35,8 +34,7 @@ export const photos = {
   borsetta,
   candeleSucculente,
   fioccoNascita,
-  palloncini70,
-  genderReveal,
+  compleanno10Corona,
   team,
   labScatoleCandele,
   labConfezioneRegalo,

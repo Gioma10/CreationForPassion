@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/language/LanguageSwitcher";
 import { SocialIcon } from "@/components/social-icon";
+import { Link } from "@/i18n/navigation";
 import { site, socials } from "@/lib/site";
 
 export function Footer() {
@@ -36,6 +37,10 @@ export function Footer() {
         <LanguageSwitcher />
         <p className="text-xs text-foreground/60 max-md:px-16">
           {t("tagline", { name: site.name, city: site.city })}
+          {" · "}
+          <Link href="/privacy" className="underline underline-offset-2 hover:text-wine">
+            {t("privacy")}
+          </Link>
         </p>
       </div>
     </footer>

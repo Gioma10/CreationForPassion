@@ -23,7 +23,8 @@
   },
   "footer": {
     "contactTitle": "Come contattarci",
-    "tagline": "© {name} · Allestimenti a {city} · Creazioni artigianali spedite in Italia e all'estero"
+    "tagline": "© {name} · Allestimenti a {city} · Creazioni artigianali spedite in Italia e all'estero",
+    "privacy": "Privacy e cookie"
   },
   "home": {
     "eyebrow": "Allestimenti & artigianato",
@@ -328,6 +329,69 @@
       "text": "Scrivici su WhatsApp: è il modo più veloce per raccontarci la tua idea."
     }
   },
+  "privacy": {
+    "meta": {
+      "title": "Privacy e cookie",
+      "description": "Come trattiamo i dati di chi visita il sito e di chi ci contatta, e quali cookie usiamo."
+    },
+    "hero": {
+      "eyebrow": "Privacy",
+      "title": "Privacy e cookie policy",
+      "intro": "Poche righe chiare su quali dati passano da questo sito, perché e come puoi esercitare i tuoi diritti."
+    },
+    "updated": "Ultimo aggiornamento: 22 ottobre 2026",
+    "sections": {
+      "titolare": {
+        "title": "Chi è il titolare del trattamento",
+        "text": "Il titolare del trattamento dei dati è {owner}, che gestisce {name}. Per qualsiasi domanda sulla privacy puoi scrivere a {email}."
+      },
+      "dati": {
+        "title": "Quali dati trattiamo",
+        "text": "Il sito non ha moduli di contatto, non richiede registrazione e non usa strumenti di analisi o di profilazione. I dati trattati sono solo questi:",
+        "items": {
+          "navigazione": "Dati di navigazione: quando visiti il sito, il server che lo ospita registra automaticamente informazioni tecniche come indirizzo IP, browser, pagina richiesta, data e ora. Servono a far funzionare il sito e a proteggerlo da abusi.",
+          "cookie": "Cookie tecnici: il sito usa solo il cookie NEXT_LOCALE, che ricorda la lingua scelta (italiano o inglese) e si cancella alla chiusura del browser.",
+          "contatti": "Dati che ci invii tu: se ci scrivi su WhatsApp, Instagram, TikTok, Facebook o via email, riceviamo il tuo nome, il numero o il profilo e il contenuto del messaggio."
+        }
+      },
+      "finalita": {
+        "title": "Perché li trattiamo",
+        "text": "I dati di navigazione e il cookie tecnico servono a mostrarti il sito e a garantirne la sicurezza, sulla base del nostro legittimo interesse (art. 6.1.f GDPR). I dati che ci invii servono solo a rispondere alle tue richieste e a preparare preventivi e lavori, sulla base di misure precontrattuali e contrattuali (art. 6.1.b GDPR). Non vendiamo i tuoi dati e non li usiamo per pubblicità."
+      },
+      "cookie": {
+        "title": "Cookie",
+        "text": "Usiamo solo cookie tecnici, necessari al funzionamento del sito: per questo non serve il tuo consenso e non vedi nessun banner. Non usiamo cookie di profilazione né cookie di terze parti. Puoi comunque cancellare i cookie dalle impostazioni del tuo browser: il sito continuerà a funzionare, ma tornerà alla lingua predefinita."
+      },
+      "hosting": {
+        "title": "Dove è ospitato il sito",
+        "text": "Il sito è ospitato da Vercel Inc. (Stati Uniti), che tratta i dati di navigazione per nostro conto come responsabile del trattamento. Il trasferimento dei dati verso gli Stati Uniti avviene nel rispetto del GDPR, sulla base dell'EU-U.S. Data Privacy Framework e delle clausole contrattuali standard approvate dalla Commissione europea."
+      },
+      "terzi": {
+        "title": "Link a WhatsApp e social",
+        "text": "I pulsanti di WhatsApp, Instagram, TikTok e Facebook sono semplici link: nessun dato viene inviato a queste piattaforme finché non ci clicchi. Una volta sulla piattaforma, i tuoi dati sono trattati secondo la sua informativa privacy."
+      },
+      "conservazione": {
+        "title": "Per quanto tempo li conserviamo",
+        "text": "I dati di navigazione sono conservati dal fornitore di hosting per il tempo strettamente necessario, di solito pochi giorni. Le conversazioni con te le conserviamo per il tempo necessario a gestire la richiesta o il lavoro, e per gli eventuali obblighi di legge."
+      },
+      "diritti": {
+        "title": "I tuoi diritti",
+        "text": "In qualsiasi momento puoi scriverci a {email} per:",
+        "items": {
+          "accesso": "sapere quali dati abbiamo su di te e riceverne una copia;",
+          "rettifica": "correggerli o aggiornarli;",
+          "cancellazione": "chiederne la cancellazione;",
+          "limitazione": "limitarne il trattamento o opporti;",
+          "portabilita": "riceverli in un formato leggibile per trasferirli altrove;",
+          "reclamo": "presentare un reclamo al Garante per la protezione dei dati personali (garanteprivacy.it)."
+        }
+      },
+      "modifiche": {
+        "title": "Modifiche",
+        "text": "Se cambiamo il modo in cui trattiamo i dati, ad esempio aggiungendo un modulo di contatto o strumenti di statistica, aggiorneremo questa pagina e la data in alto."
+      }
+    }
+  },
   "photos": {
     "sposiArcoCuore": "Allestimento con arco a cuore dorato e sagoma degli sposi, fiori, confettata, palloncini e lanterne bianche",
     "battesimoAzzurro": "Allestimento per battesimo in azzurro con drappeggi, palloncini, nome Francesco, angelo dorato e bomboniere",
@@ -342,8 +406,7 @@
     "borsetta": "Composizione in una borsetta bianca con busto, farfalla e fiori decorativi fatti a mano nei toni del rosso, con fiori secchi e foglie di palma",
     "candeleSucculente": "Vaso in gesso bianco con candele a forma di piante grasse verdi, legato con spago, accanto a fiori bianchi",
     "fioccoNascita": "Fiocco nascita azzurro con nome Damiano in plexiglass dorato, orsetto e fiori, accanto a una bomboniera coordinata",
-    "palloncini70": "Composizione di palloncini verdi con il numero 70 dorato, arco decorato con foglie e limoni e bomboniere coordinate",
-    "genderReveal": "Composizione di palloncini per gender reveal con due bebè, colonna rosa e azzurra e palloncino nero con punti interrogativi",
+    "compleanno10Corona": "Allestimento di compleanno blu e oro con il numero 10 in palloncini dorati, corone, colonne bianche e telo blu con il nome Giuseppe",
     "team": "Il team di Creation for Passion sistema le bomboniere fatte a mano su un tavolo durante un evento",
     "labScatoleCandele": "Tavolo del laboratorio con scatole regalo, candele, nastri rosa e una mano che chiude un pacchetto",
     "labConfezioneRegalo": "Mani che annodano un nastro rosa su una scatola regalo, tra confetti e fiori secchi",

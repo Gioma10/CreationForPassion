@@ -25,15 +25,15 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/allestim
 const occasions = [
   { key: "matrimoni", photo: "cameraSposa" },
   { key: "battesimi", photo: "battesimoAzzurro" },
-  { key: "compleanni", photo: "palloncini70", position: "center 55%" },
-] as const satisfies readonly { key: string; photo: PhotoId; position?: string }[];
+  { key: "compleanni", photo: "compleanno10Corona" },
+] as const satisfies readonly { key: string; photo: PhotoId }[];
 
 const gallery = [
   "battesimoPiccoloPrincipe",
   "battesimoMinnie",
   "tortaPiccoloPrincipe",
   "tortaComunione",
-  "genderReveal",
+  "compleanno10Corona",
 ] as const satisfies readonly PhotoId[];
 
 const includes = [
@@ -86,7 +86,6 @@ export default function AllestimentiPage({ params }: PageProps<"/[locale]/allest
             <li key={occasion.key} className={`flex flex-col rounded-[1.75rem] bg-card p-3 ${cardShadow}`}>
               <Photo
                 id={occasion.photo}
-                position={"position" in occasion ? occasion.position : undefined}
                 sizes="(min-width: 768px) 20rem, 100vw"
                 className="aspect-4/3 rounded-[1.25rem]"
               />

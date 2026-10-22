@@ -40,8 +40,7 @@ const categories = [
   {
     key: "palloncini",
     tags: ["compleanni", "feste", "ricorrenze"],
-    photo: "palloncini70",
-    position: "center 55%",
+    photo: "compleanno10Corona",
   },
   { key: "gadget", tags: ["regali", "eventi", "personalizzati"], photo: "alberoPlexiglass" },
 ] as const satisfies readonly { key: string; tags: readonly string[]; photo: PhotoId; position?: string }[];

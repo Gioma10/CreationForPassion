@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/eventi">
 
 // TODO: have the owner confirm the copy for each event and add a real photo for baby shower and bomboniera express.
 const events = [
-  { key: "genderReveal", icon: Sparkles, photo: "genderReveal" },
+  { key: "genderReveal", icon: Sparkles, photo: "compleanno10Corona" },
   { key: "babyShower", icon: Baby },
   { key: "bomboniereExpress", icon: Gift },
 ] as const satisfies readonly { key: string; icon: LucideIcon; photo?: PhotoId }[];

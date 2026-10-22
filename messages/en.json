@@ -23,7 +23,8 @@
   },
   "footer": {
     "contactTitle": "Get in touch",
-    "tagline": "© {name} · Event styling in {city} · Handmade creations shipped across Italy and abroad"
+    "tagline": "© {name} · Event styling in {city} · Handmade creations shipped across Italy and abroad",
+    "privacy": "Privacy and cookies"
   },
   "home": {
     "eyebrow": "Event styling & handmade",
@@ -328,6 +329,69 @@
       "text": "Message us on WhatsApp: it's the quickest way to tell us your idea."
     }
   },
+  "privacy": {
+    "meta": {
+      "title": "Privacy and cookies",
+      "description": "How we handle the data of people who visit the site or contact us, and which cookies we use."
+    },
+    "hero": {
+      "eyebrow": "Privacy",
+      "title": "Privacy and cookie policy",
+      "intro": "A few clear lines on which data passes through this site, why, and how you can exercise your rights."
+    },
+    "updated": "Last updated: 22 October 2026",
+    "sections": {
+      "titolare": {
+        "title": "Who the data controller is",
+        "text": "The data controller is {owner}, who runs {name}. For any privacy question you can write to {email}."
+      },
+      "dati": {
+        "title": "What data we process",
+        "text": "The site has no contact forms, needs no sign-up and uses no analytics or profiling tools. The only data processed is:",
+        "items": {
+          "navigazione": "Browsing data: when you visit the site, the server hosting it automatically logs technical information such as IP address, browser, requested page, date and time. This keeps the site running and protects it from abuse.",
+          "cookie": "Technical cookies: the site only uses the NEXT_LOCALE cookie, which remembers the language you chose (Italian or English) and is deleted when you close the browser.",
+          "contatti": "Data you send us: if you write to us on WhatsApp, Instagram, TikTok, Facebook or by email, we receive your name, number or profile and the content of your message."
+        }
+      },
+      "finalita": {
+        "title": "Why we process it",
+        "text": "Browsing data and the technical cookie are needed to show you the site and keep it secure, based on our legitimate interest (Art. 6(1)(f) GDPR). The data you send us is used only to answer your requests and prepare quotes and orders, based on pre-contractual and contractual measures (Art. 6(1)(b) GDPR). We do not sell your data or use it for advertising."
+      },
+      "cookie": {
+        "title": "Cookies",
+        "text": "We only use technical cookies that the site needs to work, so your consent is not required and you will not see a banner. We use no profiling or third-party cookies. You can still delete cookies in your browser settings: the site keeps working but goes back to the default language."
+      },
+      "hosting": {
+        "title": "Where the site is hosted",
+        "text": "The site is hosted by Vercel Inc. (United States), which processes browsing data on our behalf as data processor. Data is transferred to the United States in line with the GDPR, under the EU-U.S. Data Privacy Framework and the standard contractual clauses approved by the European Commission."
+      },
+      "terzi": {
+        "title": "Links to WhatsApp and social media",
+        "text": "The WhatsApp, Instagram, TikTok and Facebook buttons are plain links: no data is sent to these platforms until you click one. Once you are on the platform, your data is handled under its own privacy policy."
+      },
+      "conservazione": {
+        "title": "How long we keep it",
+        "text": "Browsing data is kept by the hosting provider only as long as strictly needed, usually a few days. We keep our conversations with you as long as needed to handle your request or order, and for any legal obligations."
+      },
+      "diritti": {
+        "title": "Your rights",
+        "text": "At any time you can write to {email} to:",
+        "items": {
+          "accesso": "find out what data we hold about you and get a copy;",
+          "rettifica": "correct or update it;",
+          "cancellazione": "ask for it to be deleted;",
+          "limitazione": "restrict or object to its processing;",
+          "portabilita": "receive it in a readable format to move it elsewhere;",
+          "reclamo": "lodge a complaint with the Italian data protection authority, the Garante per la protezione dei dati personali (garanteprivacy.it)."
+        }
+      },
+      "modifiche": {
+        "title": "Changes",
+        "text": "If we change how we handle data, for example by adding a contact form or analytics, we will update this page and the date at the top."
+      }
+    }
+  },
   "photos": {
     "sposiArcoCuore": "Wedding setup with a gold heart-shaped arch and a cut-out of the couple, flowers, a sugared almond bar, balloons and white lanterns",
     "battesimoAzzurro": "Light blue christening setup with draped fabric, balloons, the name Francesco, a gold angel and favours",
@@ -342,8 +406,7 @@
     "borsetta": "Arrangement in a white handbag with a bust, a butterfly and handmade decorative flowers in shades of red, with dried flowers and palm leaves",
     "candeleSucculente": "White plaster pot with green succulent-shaped candles, tied with twine, next to white flowers",
     "fioccoNascita": "Light blue birth bow with the name Damiano in gold plexiglass, a teddy bear and flowers, next to a matching favour",
-    "palloncini70": "Green balloon arrangement with a gold number 70, an arch decorated with leaves and lemons, and matching favours",
-    "genderReveal": "Gender reveal balloon arrangement with two babies, a pink and blue column and a black balloon with question marks",
+    "compleanno10Corona": "Blue and gold birthday setup with a gold balloon number 10, crowns, white columns and a blue backdrop with the name Giuseppe",
     "team": "The Creation for Passion team arranging handmade favours on a table during an event",
     "labScatoleCandele": "Workshop table with gift boxes, candles, pink ribbons and a hand closing a package",
     "labConfezioneRegalo": "Hands tying a pink ribbon on a gift box, among sugared almonds and dried flowers",

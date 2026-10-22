@@ -6,11 +6,14 @@ export const site = {
   // TODO: replace with the real domain before going live (used for canonical URLs, sitemap, Open Graph).
   url: "https://www.creationforpassion.it",
   city: "Catania",
+  // TODO: replace with the real owner's full name and privacy contact email (shown on /privacy).
+  owner: "Nome Cognome",
+  email: "info@creationforpassion.it",
 } as const;
 
 // TODO: replace the placeholder handles and WhatsApp number.
 export const socials = [
-  { name: "WhatsApp", href: "https://wa.me/390000000000" },
+  { name: "WhatsApp", href: "https://wa.me/3911012458" },
   { name: "Instagram", href: "https://www.instagram.com/creationforpassion" },
   { name: "TikTok", href: "https://www.tiktok.com/@creationforpassion" },
   { name: "Facebook", href: "https://www.facebook.com/creationforpassion" },
@@ -31,7 +34,7 @@ export const navLinks = [
 export const services = [
   { key: "allestimenti", href: "/allestimenti", photo: "battesimoAzzurro" },
   { key: "artigianato", href: "/artigianato", photo: "borsetta" },
-  { key: "eventi", href: "/eventi", photo: "genderReveal" },
+  { key: "eventi", href: "/eventi", photo: "compleanno10Corona" },
 ] as const satisfies readonly { key: string; href: string; photo: PhotoId }[];
 
 export type Service = (typeof services)[number];
