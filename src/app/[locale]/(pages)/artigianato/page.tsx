@@ -33,17 +33,16 @@ const categories = [
   {
     key: "bomboniere",
     tags: ["matrimoni", "battesimi", "comunioni", "lauree"],
-    photo: "fioccoNascita",
-    position: "center 40%",
+    photo: "bomboniereSposi",
   },
   { key: "candele", tags: ["candele", "gesso", "bomboniere", "regali"], photo: "barattoloGesso" },
   {
     key: "palloncini",
     tags: ["compleanni", "feste", "ricorrenze"],
-    photo: "compleanno10Corona",
+    photo: "palloncini18",
   },
   { key: "gadget", tags: ["regali", "eventi", "personalizzati"], photo: "alberoPlexiglass" },
-] as const satisfies readonly { key: string; tags: readonly string[]; photo: PhotoId; position?: string }[];
+] as const satisfies readonly { key: string; tags: readonly string[]; photo: PhotoId }[];
 
 const customOptions = ["nomi", "date", "colori", "materiali", "biglietti", "confezione"] as const;
 
@@ -111,7 +110,6 @@ export default function ArtigianatoPage({ params }: PageProps<"/[locale]/artigia
             <div className={cn("rounded-[2rem] bg-card p-3", cardShadow, i % 2 === 1 && "md:order-2")}>
               <Photo
                 id={category.photo}
-                position={"position" in category ? category.position : undefined}
                 sizes="(min-width: 768px) 32rem, 100vw"
                 className="aspect-4/3 rounded-[1.5rem]"
               />

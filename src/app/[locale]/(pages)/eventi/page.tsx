@@ -21,11 +21,11 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/eventi">
   return pageMetadata(locale as Locale, "eventi", "/eventi");
 }
 
-// TODO: have the owner confirm the copy for each event and add a real photo for baby shower and bomboniera express.
+// TODO: have the owner confirm the copy for each event and add a real photo for bomboniera express (it borrows the chi siamo team photo for now).
 const events = [
-  { key: "genderReveal", icon: Sparkles, photo: "compleanno10Corona" },
-  { key: "babyShower", icon: Baby },
-  { key: "bomboniereExpress", icon: Gift },
+  { key: "genderReveal", icon: Sparkles, photo: "genderRevealBimbi" },
+  { key: "babyShower", icon: Baby, photo: "babyShowerOrsetto" },
+  { key: "bomboniereExpress", icon: Gift, photo: "team" },
 ] as const satisfies readonly { key: string; icon: LucideIcon; photo?: PhotoId }[];
 
 export default function EventiPage({ params }: PageProps<"/[locale]/eventi">) {
@@ -52,7 +52,7 @@ export default function EventiPage({ params }: PageProps<"/[locale]/eventi">) {
           <div className={`relative rounded-[2rem] bg-card p-3 ${cardShadow}`}>
             <Photo
               cover
-              id="fioccoNascita"
+              id="arcoAzzurroPampas"
               sizes="(min-width: 768px) 24rem, 90vw"
               className="aspect-4/5 rounded-[1.5rem]"
             />

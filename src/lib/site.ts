@@ -34,7 +34,7 @@ export const navLinks = [
 export const services = [
   { key: "allestimenti", href: "/allestimenti", photo: "battesimoAzzurro" },
   { key: "artigianato", href: "/artigianato", photo: "borsetta" },
-  { key: "eventi", href: "/eventi", photo: "compleanno10Corona" },
+  { key: "eventi", href: "/eventi", photo: "arcoAzzurroPampas" },
 ] as const satisfies readonly { key: string; href: string; photo: PhotoId }[];
 
 export type Service = (typeof services)[number];

@@ -31,9 +31,9 @@ const occasions = [
 const gallery = [
   "battesimoPiccoloPrincipe",
   "battesimoMinnie",
-  "tortaPiccoloPrincipe",
-  "tortaComunione",
-  "compleanno10Corona",
+  "compleannoAristogatti",
+  "battesimoAviatore",
+  "compleannoMarino",
 ] as const satisfies readonly PhotoId[];
 
 const includes = [
