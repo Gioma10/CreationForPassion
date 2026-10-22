@@ -51,7 +51,7 @@ export const pages = [
 
 export const navLinks = [
   { href: "/allestimenti", label: "Allestimenti" },
-  { href: "/handmade", label: "Artigianato" },
+  { href: "/artigianato", label: "Artigianato" },
   { href: "/eventi", label: "Eventi" },
   { href: "/chi-siamo", label: "Chi siamo" },
   { href: "/come-lavoriamo", label: "Come lavoriamo" },
