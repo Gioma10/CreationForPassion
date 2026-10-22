@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Menu, X } from "lucide-react";
@@ -17,7 +18,9 @@ gsap.registerPlugin(useGSAP);
 export function MobileNav({ showTitle, collapsed }: { showTitle: boolean; collapsed: boolean }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const title = navLinks.find((link) => link.href === pathname)?.label;
+  const t = useTranslations("nav");
+  const current = navLinks.find((link) => link.href === pathname);
+  const title = current && t(`links.${current.key}`);
   const root = useRef<HTMLDivElement>(null);
   const tl = useRef<gsap.core.Timeline>(null);
   const reveal = useRef<gsap.core.Timeline>(null);
@@ -113,7 +116,7 @@ export function MobileNav({ showTitle, collapsed }: { showTitle: boolean; collap
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
         aria-controls="mobile-menu"
-        aria-label={open ? "Chiudi menu" : "Apri menu"}
+        aria-label={open ? t("closeMenu") : t("openMenu")}
         className="menu-toggle pointer-events-auto invisible grid size-11 place-items-center rounded-full bg-blush text-wine transition-transform duration-150 ease-out outline-none focus-visible:ring-2 focus-visible:ring-rose active:scale-90"
       >
         {open ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -121,7 +124,7 @@ export function MobileNav({ showTitle, collapsed }: { showTitle: boolean; collap
 
       <nav
         id="mobile-menu"
-        aria-label="Navigazione principale"
+        aria-label={t("label")}
         className="menu-panel pointer-events-auto invisible absolute top-full right-0 mt-3 w-[min(17rem,calc(100vw-2.5rem))] rounded-[1.75rem] bg-card p-2 opacity-0 shadow-[0_18px_40px_-20px_rgb(60_10_25/0.45)]"
       >
         {navLinks.map((link) => (
@@ -132,7 +135,7 @@ export function MobileNav({ showTitle, collapsed }: { showTitle: boolean; collap
             aria-current={pathname === link.href ? "page" : undefined}
             className="block rounded-full px-4 py-3 text-base font-semibold text-wine outline-none hover:bg-blush focus-visible:bg-blush aria-[current=page]:bg-blush"
           >
-            {link.label}
+            {t(`links.${link.key}`)}
           </Link>
         ))}
       </nav>

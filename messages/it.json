@@ -1,0 +1,356 @@
+{
+  "metadata": {
+    "title": "{name} | Allestimenti per eventi a {city} e creazioni artigianali",
+    "description": "Allestimenti per matrimoni, battesimi, comunioni e feste a Catania. Bomboniere, decorazioni floreali e creazioni fatte a mano, con spedizioni in Italia e all'estero."
+  },
+  "common": {
+    "whatsappCta": "Scrivici su WhatsApp",
+    "howWeWork": "Come lavoriamo",
+    "close": "Chiudi"
+  },
+  "nav": {
+    "label": "Navigazione principale",
+    "homeLink": "{name}, torna alla home",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "links": {
+      "allestimenti": "Allestimenti",
+      "artigianato": "Artigianato",
+      "eventi": "Eventi",
+      "chiSiamo": "Chi siamo",
+      "comeLavoriamo": "Come lavoriamo"
+    }
+  },
+  "footer": {
+    "contactTitle": "Come contattarci",
+    "tagline": "© {name} · Allestimenti a {city} · Creazioni artigianali spedite in Italia e all'estero"
+  },
+  "home": {
+    "eyebrow": "Allestimenti & artigianato",
+    "title": "Allestimenti per eventi a Catania e creazioni fatte a mano",
+    "intro": "Oggetti fatti a mano, piccoli dettagli che raccontano una storia. Creazioni da scegliere con il cuore, per dare alla tua casa un tocco che ti somiglia.",
+    "discover": "Scopri di più",
+    "back": "Torna indietro",
+    "gridEyebrow": "Scegli cosa ti serve",
+    "gridTitle": "Che cosa stai cercando?",
+    "startHere": "Inizia da qui",
+    "deckLabel": "Scopri i servizi: {services}. Frecce per sfogliare.",
+    "servicesLabel": "Servizi",
+    "services": {
+      "allestimenti": {
+        "title": "Allestimenti",
+        "description": "Hai bisogno di un'atmosfera pensata per un evento a Catania? Iniziamo da qui."
+      },
+      "artigianato": {
+        "title": "Artigianato",
+        "description": "Cerchi qualcosa fatto a mano? Iniziamo dalle creazioni che raccontano una storia."
+      },
+      "eventi": {
+        "title": "Eventi",
+        "description": "Gender reveal, baby shower o bomboniere last minute? Iniziamo dalla tua festa."
+      }
+    }
+  },
+  "allestimenti": {
+    "meta": {
+      "title": "Allestimenti per eventi a Catania",
+      "description": "Allestimenti per matrimoni, battesimi, comunioni, compleanni e feste a Catania, progettati e realizzati su misura."
+    },
+    "hero": {
+      "eyebrow": "Allestimenti a Catania",
+      "title": "Allestimenti pensati su misura per il tuo evento",
+      "intro": "Matrimoni, battesimi, comunioni, compleanni e feste: progettiamo e realizziamo ogni allestimento partendo da te, dai tuoi colori e dalla storia che vuoi raccontare."
+    },
+    "occasions": {
+      "eyebrow": "Per quali occasioni",
+      "title": "Cosa possiamo fare per te",
+      "items": {
+        "matrimoni": {
+          "title": "Matrimoni",
+          "text": "Tavoli, centrotavola e dettagli floreali coordinati, per un giorno che ti somigli in ogni angolo."
+        },
+        "battesimi": {
+          "title": "Battesimi e comunioni",
+          "text": "Atmosfere delicate, colori tenui e piccoli dettagli fatti a mano per festeggiare in famiglia."
+        },
+        "compleanni": {
+          "title": "Compleanni e feste",
+          "text": "Allestimenti a tema per ogni età, dal primo compleanno alle feste con gli amici."
+        }
+      }
+    },
+    "includes": {
+      "eyebrow": "Cosa curiamo",
+      "title": "Ogni dettaglio, dall'inizio alla fine",
+      "items": {
+        "centrotavola": "Centrotavola e decorazioni floreali",
+        "tableau": "Tableau e segnaposto",
+        "confettata": "Confettata e sweet table",
+        "backdrop": "Backdrop e angoli foto",
+        "bomboniere": "Bomboniere coordinate",
+        "allestimento": "Allestimento e smontaggio in location"
+      }
+    },
+    "gallery": {
+      "eyebrow": "Lavori realizzati",
+      "title": "Alcuni nostri allestimenti"
+    },
+    "steps": {
+      "eyebrow": "Come funziona",
+      "title": "Tre passi, senza pensieri",
+      "items": {
+        "racconti": {
+          "title": "Ci racconti l'evento",
+          "text": "Data, location, numero di ospiti e lo stile che hai in mente."
+        },
+        "progettiamo": {
+          "title": "Progettiamo insieme",
+          "text": "Ti proponiamo colori, materiali e dettagli, e li definiamo con te."
+        },
+        "allestiamo": {
+          "title": "Allestiamo per te",
+          "text": "Il giorno dell'evento pensiamo a tutto noi: tu devi solo goderti la festa."
+        }
+      }
+    },
+    "cta": {
+      "title": "Raccontaci il tuo evento",
+      "text": "Scrivici su WhatsApp: raccontaci la tua idea e ti rispondiamo per ogni informazione."
+    }
+  },
+  "artigianato": {
+    "meta": {
+      "title": "Creazioni artigianali fatte a mano",
+      "description": "Bomboniere, candele e gesso, composizioni di palloncini e gadget personalizzati fatti a mano. Spedizioni in Italia e all'estero."
+    },
+    "hero": {
+      "eyebrow": "Fatto a mano",
+      "title": "Creazioni artigianali che raccontano una storia",
+      "intro": "Bomboniere, candele e gesso, composizioni di palloncini e gadget personalizzati: ogni pezzo nasce a mano, con cura, e può essere fatto su misura per te."
+    },
+    "promises": {
+      "handmade": {
+        "title": "Fatto a mano",
+        "text": "Ogni pezzo nasce nel nostro laboratorio, uno alla volta."
+      },
+      "custom": {
+        "title": "Su misura",
+        "text": "Nomi, date, colori e materiali scelti insieme a te."
+      },
+      "shipping": {
+        "title": "Spedito ovunque",
+        "text": "Spediamo in tutta Italia e all'estero."
+      }
+    },
+    "categories": {
+      "eyebrow": "Le nostre creazioni",
+      "title": "Cosa realizziamo a mano",
+      "items": {
+        "bomboniere": {
+          "title": "Bomboniere",
+          "text": "Piccoli ricordi da regalare ai tuoi ospiti, coordinati con i colori e lo stile della festa."
+        },
+        "candele": {
+          "title": "Candele e gesso",
+          "text": "Candele e oggetti in gesso fatti a mano, da regalare, da tenere in casa o da usare come bomboniera."
+        },
+        "palloncini": {
+          "title": "Composizioni di palloncini",
+          "text": "Composizioni di palloncini per feste e ricorrenze, nei colori e nelle forme che scegli tu."
+        },
+        "gadget": {
+          "title": "Gadget personalizzati",
+          "text": "Gadget con nomi, date o iniziali, da tenere per te o da regalare."
+        }
+      }
+    },
+    "tags": {
+      "matrimoni": "Matrimoni",
+      "battesimi": "Battesimi",
+      "comunioni": "Comunioni",
+      "lauree": "Lauree",
+      "candele": "Candele",
+      "gesso": "Gesso",
+      "bomboniere": "Bomboniere",
+      "regali": "Regali",
+      "compleanni": "Compleanni",
+      "feste": "Feste",
+      "ricorrenze": "Ricorrenze",
+      "eventi": "Eventi",
+      "personalizzati": "Personalizzati"
+    },
+    "custom": {
+      "eyebrow": "Su misura per te",
+      "title": "Lo vuoi personalizzato?",
+      "text": "Ogni creazione può essere adattata a te: raccontaci l'occasione e scegliamo insieme i dettagli.",
+      "options": {
+        "nomi": "Nomi e iniziali",
+        "date": "Date speciali",
+        "colori": "Colori a scelta",
+        "materiali": "Materiali",
+        "biglietti": "Biglietti e tag",
+        "confezione": "Confezione regalo"
+      }
+    },
+    "cta": {
+      "title": "Hai in mente una creazione?",
+      "text": "Scrivici su WhatsApp: ti aiutiamo a trasformare la tua idea in un oggetto unico."
+    }
+  },
+  "eventi": {
+    "meta": {
+      "title": "Eventi",
+      "description": "Gender reveal, baby shower o bomboniere last minute? Iniziamo dalla tua festa."
+    },
+    "hero": {
+      "eyebrow": "Eventi",
+      "title": "Le feste più belle, pensate per te",
+      "intro": "Dalla sorpresa del gender reveal alla dolcezza di un baby shower, fino alle bomboniere da preparare in fretta: ci occupiamo noi di ogni dettaglio."
+    },
+    "items": {
+      "genderReveal": {
+        "title": "Gender reveal",
+        "text": "Fiocco rosa o azzurro? Prepariamo l'allestimento, i palloncini e la sorpresa per svelarlo a tutti nel momento più emozionante."
+      },
+      "babyShower": {
+        "title": "Baby shower",
+        "text": "Una festa dolce per aspettare il nuovo arrivo: decorazioni, tavolo dei dolci e piccoli pensieri per gli invitati, nei colori che preferisci."
+      },
+      "bomboniereExpress": {
+        "title": "Bomboniera express",
+        "text": "Ti servono le bomboniere in poco tempo? Scrivici la data: realizziamo a mano bomboniere curate anche quando i tempi sono stretti."
+      }
+    },
+    "cta": {
+      "title": "Hai una festa in programma?",
+      "text": "Scrivici su WhatsApp con la data e il tipo di evento: ti rispondiamo subito."
+    }
+  },
+  "chiSiamo": {
+    "meta": {
+      "title": "Chi siamo",
+      "description": "Creation for Passion: allestimenti per eventi a Catania e creazioni artigianali nate dalla passione per il fatto a mano."
+    },
+    "hero": {
+      "eyebrow": "Chi siamo",
+      "title": "Creare è la nostra passione",
+      "intro": "Siamo Creation for Passion, un piccolo laboratorio creativo di Catania. Progettiamo allestimenti per eventi e realizziamo a mano creazioni che raccontano una storia: la tua."
+    },
+    "story": {
+      "eyebrow": "La nostra storia",
+      "title": "Tutto è nato dal fatto a mano",
+      "paragraph1": "Abbiamo iniziato creando bomboniere e piccoli oggetti per amici e famiglia. Pezzo dopo pezzo, la passione è diventata un lavoro: oggi seguiamo eventi interi, dall'idea all'allestimento.",
+      "paragraph2": "Lavoriamo a Catania e dintorni per gli allestimenti, e spediamo le nostre creazioni in tutta Italia e all'estero."
+    },
+    "values": {
+      "eyebrow": "In cosa crediamo",
+      "title": "Quello che ci guida",
+      "items": {
+        "passione": {
+          "title": "Passione",
+          "text": "È nel nostro nome: ogni progetto nasce dalla voglia di creare qualcosa di bello."
+        },
+        "dettagli": {
+          "title": "Cura dei dettagli",
+          "text": "Dal centrotavola al nastro della bomboniera, niente è lasciato al caso."
+        },
+        "misura": {
+          "title": "Su misura",
+          "text": "Non esistono due eventi uguali: partiamo sempre da te e dalla tua storia."
+        }
+      }
+    },
+    "lab": {
+      "eyebrow": "Dietro le quinte",
+      "title": "Il nostro laboratorio"
+    },
+    "cta": {
+      "title": "Conosciamoci",
+      "text": "Scrivici su WhatsApp per raccontarci la tua idea: ci fa sempre piacere."
+    }
+  },
+  "comeLavoriamo": {
+    "meta": {
+      "title": "Come lavoriamo",
+      "description": "Dal primo contatto al giorno dell'evento: come progettiamo i tuoi allestimenti e realizziamo le creazioni su misura."
+    },
+    "hero": {
+      "eyebrow": "Come lavoriamo",
+      "title": "Dal primo messaggio al giorno della festa",
+      "intro": "Che si tratti di un allestimento o di una creazione fatta a mano, lavoriamo sempre così: ascoltiamo, progettiamo insieme e realizziamo ogni dettaglio con cura."
+    },
+    "steps": {
+      "eyebrow": "Il percorso",
+      "title": "Quattro passi insieme",
+      "items": {
+        "scrivi": {
+          "title": "Ci scrivi",
+          "text": "Mandaci un messaggio su WhatsApp o sui social: raccontaci che evento stai organizzando o cosa ti serve."
+        },
+        "conosciamo": {
+          "title": "Ci conosciamo",
+          "text": "Parliamo della data, dello stile, dei colori e di cosa hai in mente. Se vuoi, mandaci foto e ispirazioni."
+        },
+        "idee": {
+          "title": "Ti diamo qualche idea",
+          "text": "Ti raccontiamo come immaginiamo il tuo evento: idee, colori e materiali. Li definiamo insieme finché non ti convincono."
+        },
+        "realizziamo": {
+          "title": "Realizziamo",
+          "text": "Creiamo tutto a mano. Per gli allestimenti pensiamo noi alla location il giorno dell'evento; le creazioni te le spediamo."
+        }
+      }
+    },
+    "faq": {
+      "eyebrow": "Domande frequenti",
+      "title": "Hai qualche dubbio?",
+      "items": {
+        "anticipo": {
+          "question": "Quanto tempo prima devo contattarvi?",
+          "answer": "Prima è, meglio è. Per un matrimonio conviene scriverci qualche mese prima; per bomboniere e creazioni dipende dalle quantità. Scrivici e ti diciamo subito se siamo disponibili per la tua data."
+        },
+        "zona": {
+          "question": "Lavorate solo a Catania?",
+          "answer": "Gli allestimenti li realizziamo a Catania e dintorni. Le creazioni fatte a mano le spediamo in tutta Italia e all'estero."
+        },
+        "personalizzare": {
+          "question": "Posso personalizzare una creazione?",
+          "answer": "Sì, è quello che facciamo più volentieri: nomi, date, colori e materiali si scelgono insieme."
+        },
+        "informazioni": {
+          "question": "Come posso avere informazioni?",
+          "answer": "Scrivici su WhatsApp o sui social con il tipo di evento, la data e un'idea dello stile che ti piace: ti rispondiamo per ogni dubbio."
+        }
+      }
+    },
+    "cta": {
+      "title": "Iniziamo dal primo passo",
+      "text": "Scrivici su WhatsApp: è il modo più veloce per raccontarci la tua idea."
+    }
+  },
+  "photos": {
+    "sposiArcoCuore": "Allestimento con arco a cuore dorato e sagoma degli sposi, fiori, confettata, palloncini e lanterne bianche",
+    "battesimoAzzurro": "Allestimento per battesimo in azzurro con drappeggi, palloncini, nome Francesco, angelo dorato e bomboniere",
+    "battesimoMinnie": "Allestimento rosa a tema Minnie con palloncini, torta, colonne bianche e sagome dei personaggi",
+    "battesimoPiccoloPrincipe": "Allestimento a tema Piccolo Principe con torta, colonne, palloncini, numero 1 dorato e sagome dei personaggi",
+    "cameraSposa": "Camera della sposa allestita con palloncini argento e bianchi, scritta Bride sul letto e abito da sposa appeso",
+    "tortaComunione": "Torta per la prima comunione a tema Piccolo Principe con volpe, aeroplano e citazione sulla rosa",
+    "tortaPiccoloPrincipe": "Torta a piani a tema Piccolo Principe con stelle dorate, bottiglia personalizzata e bomboniera con orsetto",
+    "alberoPlexiglass": "Albero in plexiglass a specchio con cuori e nomi dei bambini e targa a tulipano, regalo personalizzato per la maestra",
+    "annaffiatoio": "Annaffiatoio in gesso bianco decorato con fiori secchi, ortensie e fiori decorativi fatti a mano",
+    "barattoloGesso": "Barattolo in gesso bianco con fiocco verde e fiori decorativi fatti a mano su un runner dorato",
+    "borsetta": "Composizione in una borsetta bianca con busto, farfalla e fiori decorativi fatti a mano nei toni del rosso, con fiori secchi e foglie di palma",
+    "candeleSucculente": "Vaso in gesso bianco con candele a forma di piante grasse verdi, legato con spago, accanto a fiori bianchi",
+    "fioccoNascita": "Fiocco nascita azzurro con nome Damiano in plexiglass dorato, orsetto e fiori, accanto a una bomboniera coordinata",
+    "palloncini70": "Composizione di palloncini verdi con il numero 70 dorato, arco decorato con foglie e limoni e bomboniere coordinate",
+    "genderReveal": "Composizione di palloncini per gender reveal con due bebè, colonna rosa e azzurra e palloncino nero con punti interrogativi",
+    "team": "Il team di Creation for Passion sistema le bomboniere fatte a mano su un tavolo durante un evento",
+    "labScatoleCandele": "Tavolo del laboratorio con scatole regalo, candele, nastri rosa e una mano che chiude un pacchetto",
+    "labConfezioneRegalo": "Mani che annodano un nastro rosa su una scatola regalo, tra confetti e fiori secchi",
+    "labCandelaEtichetta": "Mani che applicano un'etichetta su una candela in vetro, accanto a portachiavi in legno da personalizzare",
+    "labTavoloFiocco": "Banco di lavoro con cerchio in legno, nastro rosa, forbici dorate, cartoncini colorati e plotter da taglio"
+  },
+  "language": {
+    "label": "Lingua"
+  }
+}

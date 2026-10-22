@@ -1,7 +1,10 @@
+import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "@/components/language/LanguageSwitcher";
 import { SocialIcon } from "@/components/social-icon";
 import { site, socials } from "@/lib/site";
 
 export function Footer() {
+  const t = useTranslations("footer");
   return (
     <footer className="relative flex min-h-[clamp(9rem,26dvh,14rem)] shrink-0 items-end overflow-hidden pt-4 pb-[max(3dvh,1rem)]">
       <div
@@ -14,7 +17,7 @@ export function Footer() {
       />
 
       <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center gap-3 px-4 text-center">
-        <h2 className="md:text-xl font-semibold">Come contattarci</h2>
+        <h2 className="md:text-xl font-semibold">{t("contactTitle")}</h2>
         <ul className="flex gap-3">
           {socials.map((social) => (
             <li key={social.name}>
@@ -30,9 +33,9 @@ export function Footer() {
             </li>
           ))}
         </ul>
+        <LanguageSwitcher />
         <p className="text-xs text-foreground/60 max-md:px-16">
-          © {site.name} · Allestimenti a {site.city} · Creazioni artigianali
-          spedite in Italia e all&apos;estero
+          {t("tagline", { name: site.name, city: site.city })}
         </p>
       </div>
     </footer>

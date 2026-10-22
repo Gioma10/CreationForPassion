@@ -1,15 +1,21 @@
 import type { Organization, WithContext } from "schema-dts";
+import { type Locale, useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 import { JsonLd } from "@/components/JsonLd";
 import { Footer } from "@/components/Footer";
 import { ServicesHero } from "@/components/ServicesHero";
 import { SiteHeader } from "@/components/header/SiteHeader";
 import { site, socials } from "@/lib/site";
 
-const jsonLd: WithContext<Organization> = {
+export default function Home({ params }: PageProps<"/[locale]">) {
+  setRequestLocale(use(params).locale as Locale);
+  const t = useTranslations("metadata");
+  const jsonLd: WithContext<Organization> = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: site.name,
-  description: site.description,
+  description: t("description"),
   url: site.url,
   logo: `${site.url}/cforp.png`,
   image: `${site.url}/cforp.png`,
@@ -20,9 +26,8 @@ const jsonLd: WithContext<Organization> = {
   },
   areaServed: site.city,
   sameAs: socials.map((social) => social.href),
-};
+  };
 
-export default function Home() {
   return (
     <>
       <JsonLd data={jsonLd} />

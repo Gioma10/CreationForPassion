@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function Logo({ className }: { className?: string }) {
@@ -11,7 +12,7 @@ export function Logo({ className }: { className?: string }) {
     >
       <Image
         src="/cforp.png"
-        alt="Creation for Passion"
+        alt={site.name}
         fill
         sizes="64px"
         loading="eager"

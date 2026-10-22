@@ -1,5 +1,6 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowUpRight, ImageIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { SocialIcon } from "@/components/social-icon";
 import { socials } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -49,6 +50,7 @@ export function PhotoPlaceholder({ className }: { className?: string }) {
 
 // Desktop only: on mobile the pinned WhatsApp button in SiteHeader does this job.
 export function WhatsAppButton({ inverted = false }: { inverted?: boolean }) {
+  const t = useTranslations("common");
   return (
     <a
       href={whatsapp.href}
@@ -62,7 +64,7 @@ export function WhatsAppButton({ inverted = false }: { inverted?: boolean }) {
       )}
     >
       <SocialIcon name="WhatsApp" className="size-4" />
-      Scrivici su WhatsApp
+      {t("whatsappCta")}
     </a>
   );
 }

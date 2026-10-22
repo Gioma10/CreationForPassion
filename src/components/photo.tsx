@@ -6,6 +6,8 @@ import { createPortal } from "react-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { X } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { photos, type PhotoId } from "@/lib/photos";
 import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(useGSAP);
@@ -36,16 +38,14 @@ function fittedRect(src: StaticImageData): Rect {
 // `sizes` must account for object-cover: a landscape photo in a narrower frame renders wider than the frame.
 // Every photo opens full size on click; pass `zoomable={false}` when it sits inside a link or another control.
 export function Photo({
-  src,
-  alt,
+  id,
   sizes,
   className,
   position,
   cover = false,
   zoomable = true,
 }: {
-  src: StaticImageData;
-  alt: string;
+  id: PhotoId;
   sizes: string;
   className?: string;
   position?: string;
@@ -53,6 +53,9 @@ export function Photo({
   zoomable?: boolean;
 }) {
   const [origin, setOrigin] = useState<HTMLButtonElement | null>(null);
+  const t = useTranslations("photos");
+  const src = photos[id];
+  const alt = t(id);
 
   const image = (
     <Image
@@ -121,6 +124,7 @@ function Lightbox({
   origin: HTMLElement;
   onClosed: () => void;
 }) {
+  const t = useTranslations("common");
   const root = useRef<HTMLDivElement>(null);
   const frame = useRef<HTMLDivElement>(null);
   const closeButton = useRef<HTMLButtonElement>(null);
@@ -217,7 +221,7 @@ function Lightbox({
         ref={closeButton}
         data-fade
         type="button"
-        aria-label="Chiudi"
+        aria-label={t("close")}
         onClick={(event) => {
           event.stopPropagation();
           close();

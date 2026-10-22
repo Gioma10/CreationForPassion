@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/navigation";
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { NavLogo } from "@/components/header/NavLogo";
@@ -15,6 +16,7 @@ gsap.registerPlugin(useGSAP);
 // `--open` (0 → 1) drives the slide in CSS, so the closed logo is centered from the first server-rendered paint.
 export function DesktopNav({ open }: { open: boolean }) {
   const pathname = usePathname();
+  const t = useTranslations("nav");
   const root = useRef<HTMLDivElement>(null);
   const tl = useRef<gsap.core.Timeline>(null);
 
@@ -58,7 +60,7 @@ export function DesktopNav({ open }: { open: boolean }) {
     >
       <NavLogo />
       <nav
-        aria-label="Navigazione principale"
+        aria-label={t("label")}
         className="nav-pill pointer-events-auto -ml-8 flex h-12 items-center gap-7 rounded-full border-2 border-background bg-blush pr-7 pl-12 [clip-path:inset(0%_100%_0%_0%_round_9999px)]"
       >
         {navLinks.map((link) => (
@@ -68,7 +70,7 @@ export function DesktopNav({ open }: { open: boolean }) {
             aria-current={pathname === link.href ? "page" : undefined}
             className="invisible text-sm font-medium whitespace-nowrap text-wine transition-colors outline-none hover:text-rose-foreground focus-visible:underline aria-[current=page]:font-bold"
           >
-            {link.label}
+            {t(`links.${link.key}`)}
           </Link>
         ))}
       </nav>

@@ -1,6 +1,7 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { DesktopNav } from "@/components/header/DesktopNav";
 import { MobileNav } from "@/components/header/MobileNav";
 import { useHideOnScroll } from "@/components/header/use-hide-on-scroll";
@@ -12,6 +13,7 @@ const whatsapp = socials.find((social) => social.name === "WhatsApp")!;
 
 export function SiteHeader() {
   const { hidden, scrolled, show } = useHideOnScroll();
+  const t = useTranslations("common");
   // The home shows the logo alone; every other page opens the navigation out of it.
   const isHome = usePathname() === "/";
 
@@ -38,7 +40,7 @@ export function SiteHeader() {
         href={whatsapp.href}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Scrivici su WhatsApp"
+        aria-label={t("whatsappCta")}
         className="fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] left-5 z-50 grid size-12 place-items-center rounded-full bg-wine text-background shadow-[0_8px_20px_-6px_rgb(0_0_0/0.35)] transition-transform duration-150 ease-out active:scale-90 md:hidden"
       >
         <SocialIcon name="WhatsApp" className="size-6" />

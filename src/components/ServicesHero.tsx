@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { Flip } from "gsap/Flip";
@@ -12,6 +13,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HOME_RESET_EVENT } from "@/lib/home-reset";
 import { cn } from "@/lib/utils";
+import { photos } from "@/lib/photos";
 import { services, type Service } from "@/lib/site";
 
 gsap.registerPlugin(useGSAP, Draggable, Flip);
@@ -40,6 +42,7 @@ export function ServicesHero() {
 
 function ServicesHeroView() {
   const [view, setView] = useState<View>("deck");
+  const t = useTranslations("home");
   const root = useRef<HTMLElement>(null);
   const cards = useRef<HTMLDivElement[]>([]);
   const order = useRef(services.map((_, i) => i));
@@ -249,23 +252,21 @@ function ServicesHeroView() {
         {isDeck ? (
           <div key="deck" className="view-copy flex flex-col items-start">
             <p className="flex items-center gap-3 text-xs font-semibold tracking-widest text-wine uppercase">
-              Allestimenti & artigianato
+              {t("eyebrow")}
               <span className="h-px w-8 bg-wine/60" />
             </p>
             <h1 className="mt-4 max-w-xl text-[clamp(1.625rem,4.5dvh,2rem)] md:text-[clamp(1.75rem,5.5dvh,2.75rem)] leading-tight tracking-tight text-balance text-wine">
-              Allestimenti per eventi a Catania e creazioni fatte a mano
+              {t("title")}
             </h1>
             <p className="mt-3 max-w-md text-[0.9375rem] text-wine/85 md:text-base">
-              Oggetti fatti a mano, piccoli dettagli che raccontano una storia.
-              Creazioni da scegliere con il cuore, per dare alla tua casa un
-              tocco che ti somiglia.
+              {t("intro")}
             </p>
             <Button
               data-view-focus
               onClick={() => show("grid")}
               className="mt-5 h-11 gap-3 rounded-full bg-wine px-6 text-base text-background hover:bg-wine/90"
             >
-              Scopri di più
+              {t("discover")}
               <ArrowUpRight data-icon="inline-end" />
             </Button>
           </div>
@@ -277,11 +278,11 @@ function ServicesHeroView() {
               className="mb-5 flex cursor-pointer items-center gap-1.5 rounded-full text-xs font-semibold text-wine/80 transition-colors outline-none hover:text-wine focus-visible:ring-2 focus-visible:ring-rose"
             >
               <ArrowLeft className="size-3.5" />
-              Torna indietro
+              {t("back")}
             </button>
 
             <p className="flex items-center gap-3 text-xs font-semibold tracking-widest text-wine uppercase">
-              Scegli cosa ti serve
+              {t("gridEyebrow")}
               <span className="h-px w-8 bg-wine/60" />
             </p>
             <h2
@@ -289,7 +290,7 @@ function ServicesHeroView() {
               tabIndex={-1}
               className="text-[clamp(1.75rem,5dvh,2.5rem)] leading-tight font-bold tracking-tight text-wine outline-none"
             >
-              Che cosa stai cercando?
+              {t("gridTitle")}
             </h2>
           </div>
         )}
@@ -299,8 +300,8 @@ function ServicesHeroView() {
           tabIndex={isDeck ? 0 : undefined}
           aria-label={
             isDeck
-              ? `Scopri i servizi: ${services.map((s) => s.title).join(", ")}. Frecce per sfogliare.`
-              : "Servizi"
+              ? t("deckLabel", { services: services.map((s) => t(`services.${s.key}.title`)).join(", ") })
+              : t("servicesLabel")
           }
           onClick={() => isDeck && !justDragged.current && show("grid")}
           onKeyDown={onDeckKeyDown}
@@ -313,7 +314,7 @@ function ServicesHeroView() {
         >
           {services.map((service, i) => (
             <ServiceCard
-              key={service.title}
+              key={service.key}
               ref={(el) => {
                 if (el) cards.current[i] = el;
               }}
@@ -342,6 +343,8 @@ function ServiceCard({
   initialPose: (typeof DECK_POSES)[number];
   initialZ: number;
 }) {
+  const t = useTranslations("home");
+  const tPhotos = useTranslations("photos");
   const isDeck = view === "deck";
   const href = isDeck ? undefined : service.href;
 
@@ -349,8 +352,8 @@ function ServiceCard({
     <>
       <div className="relative min-h-0 flex-1 overflow-hidden rounded-[6cqw] bg-blush">
         <Image
-          src={service.photo.src}
-          alt={service.photo.alt}
+          src={photos[service.photo]}
+          alt={tPhotos(service.photo)}
           fill
           placeholder="blur"
           sizes="(min-width: 768px) 24rem, 72vw"
@@ -359,12 +362,12 @@ function ServiceCard({
         />
       </div>
       <div className="flex shrink-0 flex-col px-[3cqw] pt-[5cqw] pb-[3cqw]">
-        <h3 className="text-[7cqw] leading-tight font-bold text-wine">{service.title}</h3>
+        <h3 className="text-[7cqw] leading-tight font-bold text-wine">{t(`services.${service.key}.title`)}</h3>
         <p className="mt-[3cqw] line-clamp-3 text-[4.9cqw] leading-relaxed text-foreground/75">
-          {service.description}
+          {t(`services.${service.key}.description`)}
         </p>
         <span className="mt-[5cqw] flex items-center gap-[2cqw] text-[4.9cqw] font-semibold text-wine">
-          Inizia da qui
+          {t("startHere")}
           <ArrowRight className="size-[5.6cqw] transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       </div>

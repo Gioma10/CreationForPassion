@@ -1,0 +1,356 @@
+{
+  "metadata": {
+    "title": "{name} | Event styling in {city} and handmade creations",
+    "description": "Styling for weddings, christenings, communions and parties in Catania. Wedding favours, floral decorations and handmade creations, shipped across Italy and abroad."
+  },
+  "common": {
+    "whatsappCta": "Message us on WhatsApp",
+    "howWeWork": "How we work",
+    "close": "Close"
+  },
+  "nav": {
+    "label": "Main navigation",
+    "homeLink": "{name}, back to the home page",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "links": {
+      "allestimenti": "Event styling",
+      "artigianato": "Handmade",
+      "eventi": "Events",
+      "chiSiamo": "About us",
+      "comeLavoriamo": "How we work"
+    }
+  },
+  "footer": {
+    "contactTitle": "Get in touch",
+    "tagline": "© {name} · Event styling in {city} · Handmade creations shipped across Italy and abroad"
+  },
+  "home": {
+    "eyebrow": "Event styling & handmade",
+    "title": "Event styling in Catania and handmade creations",
+    "intro": "Handmade pieces and small details that tell a story. Creations chosen with the heart, to give your home a touch that feels like you.",
+    "discover": "Discover more",
+    "back": "Go back",
+    "gridEyebrow": "Choose what you need",
+    "gridTitle": "What are you looking for?",
+    "startHere": "Start here",
+    "deckLabel": "Explore our services: {services}. Use the arrow keys to browse.",
+    "servicesLabel": "Services",
+    "services": {
+      "allestimenti": {
+        "title": "Event styling",
+        "description": "Looking for the right atmosphere for an event in Catania? Start here."
+      },
+      "artigianato": {
+        "title": "Handmade",
+        "description": "Looking for something handmade? Start with creations that tell a story."
+      },
+      "eventi": {
+        "title": "Events",
+        "description": "A gender reveal, a baby shower or last-minute favours? Let's start with your party."
+      }
+    }
+  },
+  "allestimenti": {
+    "meta": {
+      "title": "Event styling in Catania",
+      "description": "Styling for weddings, christenings, communions, birthdays and parties in Catania, designed and made to measure."
+    },
+    "hero": {
+      "eyebrow": "Event styling in Catania",
+      "title": "Event styling made to measure for your day",
+      "intro": "Weddings, christenings, communions, birthdays and parties: we design and create every setup starting from you, your colours and the story you want to tell."
+    },
+    "occasions": {
+      "eyebrow": "For every occasion",
+      "title": "What we can do for you",
+      "items": {
+        "matrimoni": {
+          "title": "Weddings",
+          "text": "Coordinated tables, centrepieces and floral details, for a day that feels like you in every corner."
+        },
+        "battesimi": {
+          "title": "Christenings and communions",
+          "text": "Delicate settings, soft colours and small handmade details to celebrate with your family."
+        },
+        "compleanni": {
+          "title": "Birthdays and parties",
+          "text": "Themed setups for every age, from a first birthday to parties with friends."
+        }
+      }
+    },
+    "includes": {
+      "eyebrow": "What we take care of",
+      "title": "Every detail, from start to finish",
+      "items": {
+        "centrotavola": "Centrepieces and floral decorations",
+        "tableau": "Seating chart and place cards",
+        "confettata": "Sugared almond bar and sweet table",
+        "backdrop": "Backdrops and photo corners",
+        "bomboniere": "Matching wedding favours",
+        "allestimento": "Setup and teardown at the venue"
+      }
+    },
+    "gallery": {
+      "eyebrow": "Our work",
+      "title": "Some of our setups"
+    },
+    "steps": {
+      "eyebrow": "How it works",
+      "title": "Three steps, no stress",
+      "items": {
+        "racconti": {
+          "title": "Tell us about your event",
+          "text": "The date, the venue, the number of guests and the style you have in mind."
+        },
+        "progettiamo": {
+          "title": "We design it together",
+          "text": "We suggest colours, materials and details, and we finalise them with you."
+        },
+        "allestiamo": {
+          "title": "We set it up for you",
+          "text": "On the day of the event we take care of everything: you just enjoy the party."
+        }
+      }
+    },
+    "cta": {
+      "title": "Tell us about your event",
+      "text": "Message us on WhatsApp: share your idea and we'll answer all your questions."
+    }
+  },
+  "artigianato": {
+    "meta": {
+      "title": "Handmade creations",
+      "description": "Wedding favours, candles and plaster, balloon arrangements and personalised gifts, all made by hand. Shipped across Italy and abroad."
+    },
+    "hero": {
+      "eyebrow": "Made by hand",
+      "title": "Handmade creations that tell a story",
+      "intro": "Wedding favours, candles and plaster, balloon arrangements and personalised gifts: every piece is made by hand, with care, and can be made to measure for you."
+    },
+    "promises": {
+      "handmade": {
+        "title": "Made by hand",
+        "text": "Every piece is made in our workshop, one at a time."
+      },
+      "custom": {
+        "title": "Made to measure",
+        "text": "Names, dates, colours and materials chosen together with you."
+      },
+      "shipping": {
+        "title": "Shipped anywhere",
+        "text": "We ship across Italy and abroad."
+      }
+    },
+    "categories": {
+      "eyebrow": "Our creations",
+      "title": "What we make by hand",
+      "items": {
+        "bomboniere": {
+          "title": "Wedding favours",
+          "text": "Small keepsakes for your guests, matched to the colours and style of your celebration."
+        },
+        "candele": {
+          "title": "Candles and plaster",
+          "text": "Handmade candles and plaster pieces, to give as gifts, keep at home or use as favours."
+        },
+        "palloncini": {
+          "title": "Balloon arrangements",
+          "text": "Balloon arrangements for parties and special days, in the colours and shapes you choose."
+        },
+        "gadget": {
+          "title": "Personalised gifts",
+          "text": "Gifts with names, dates or initials, to keep for yourself or to give away."
+        }
+      }
+    },
+    "tags": {
+      "matrimoni": "Weddings",
+      "battesimi": "Christenings",
+      "comunioni": "Communions",
+      "lauree": "Graduations",
+      "candele": "Candles",
+      "gesso": "Plaster",
+      "bomboniere": "Favours",
+      "regali": "Gifts",
+      "compleanni": "Birthdays",
+      "feste": "Parties",
+      "ricorrenze": "Special days",
+      "eventi": "Events",
+      "personalizzati": "Personalised"
+    },
+    "custom": {
+      "eyebrow": "Made for you",
+      "title": "Want it personalised?",
+      "text": "Every creation can be tailored to you: tell us about the occasion and we'll choose the details together.",
+      "options": {
+        "nomi": "Names and initials",
+        "date": "Special dates",
+        "colori": "Your choice of colours",
+        "materiali": "Materials",
+        "biglietti": "Cards and tags",
+        "confezione": "Gift wrapping"
+      }
+    },
+    "cta": {
+      "title": "Have a creation in mind?",
+      "text": "Message us on WhatsApp: we'll help you turn your idea into a one-of-a-kind piece."
+    }
+  },
+  "eventi": {
+    "meta": {
+      "title": "Events",
+      "description": "A gender reveal, a baby shower or last-minute favours? Let's start with your party."
+    },
+    "hero": {
+      "eyebrow": "Events",
+      "title": "The loveliest parties, designed for you",
+      "intro": "From the surprise of a gender reveal to the sweetness of a baby shower, to favours that need to be ready fast: we take care of every detail."
+    },
+    "items": {
+      "genderReveal": {
+        "title": "Gender reveal",
+        "text": "Pink or blue? We prepare the setup, the balloons and the surprise to reveal it to everyone at the most exciting moment."
+      },
+      "babyShower": {
+        "title": "Baby shower",
+        "text": "A sweet party to welcome the new arrival: decorations, a dessert table and little gifts for your guests, in the colours you love."
+      },
+      "bomboniereExpress": {
+        "title": "Express favours",
+        "text": "Need your favours in a hurry? Send us the date: we hand-make beautiful favours even when time is short."
+      }
+    },
+    "cta": {
+      "title": "Planning a party?",
+      "text": "Message us on WhatsApp with the date and the type of event: we'll reply right away."
+    }
+  },
+  "chiSiamo": {
+    "meta": {
+      "title": "About us",
+      "description": "Creation for Passion: event styling in Catania and handmade creations born from a passion for making things by hand."
+    },
+    "hero": {
+      "eyebrow": "About us",
+      "title": "Creating is our passion",
+      "intro": "We are Creation for Passion, a small creative workshop in Catania. We design event setups and hand-make creations that tell a story: yours."
+    },
+    "story": {
+      "eyebrow": "Our story",
+      "title": "It all started with handmade",
+      "paragraph1": "We began by making wedding favours and small gifts for friends and family. Piece by piece, the passion became a job: today we look after entire events, from the first idea to the final setup.",
+      "paragraph2": "We style events in Catania and the surrounding area, and we ship our creations across Italy and abroad."
+    },
+    "values": {
+      "eyebrow": "What we believe in",
+      "title": "What guides us",
+      "items": {
+        "passione": {
+          "title": "Passion",
+          "text": "It's in our name: every project starts from the wish to create something beautiful."
+        },
+        "dettagli": {
+          "title": "Attention to detail",
+          "text": "From the centrepiece to the ribbon on a favour, nothing is left to chance."
+        },
+        "misura": {
+          "title": "Made to measure",
+          "text": "No two events are alike: we always start from you and your story."
+        }
+      }
+    },
+    "lab": {
+      "eyebrow": "Behind the scenes",
+      "title": "Our workshop"
+    },
+    "cta": {
+      "title": "Let's get to know each other",
+      "text": "Message us on WhatsApp to tell us your idea: we'd love to hear from you."
+    }
+  },
+  "comeLavoriamo": {
+    "meta": {
+      "title": "How we work",
+      "description": "From the first message to the day of the event: how we design your setups and make our creations to measure."
+    },
+    "hero": {
+      "eyebrow": "How we work",
+      "title": "From the first message to the day of the party",
+      "intro": "Whether it's an event setup or a handmade creation, we always work the same way: we listen, we design together and we craft every detail with care."
+    },
+    "steps": {
+      "eyebrow": "The journey",
+      "title": "Four steps together",
+      "items": {
+        "scrivi": {
+          "title": "You message us",
+          "text": "Send us a message on WhatsApp or social media: tell us what event you're planning or what you need."
+        },
+        "conosciamo": {
+          "title": "We get to know you",
+          "text": "We talk about the date, the style, the colours and what you have in mind. If you like, send us photos and inspiration."
+        },
+        "idee": {
+          "title": "We share some ideas",
+          "text": "We tell you how we picture your event: ideas, colours and materials. We refine them together until you love them."
+        },
+        "realizziamo": {
+          "title": "We make it happen",
+          "text": "We make everything by hand. For event setups we take care of the venue on the day; creations are shipped to you."
+        }
+      }
+    },
+    "faq": {
+      "eyebrow": "Frequently asked questions",
+      "title": "Any questions?",
+      "items": {
+        "anticipo": {
+          "question": "How far in advance should I contact you?",
+          "answer": "The sooner, the better. For a wedding it's best to write to us a few months ahead; for favours and creations it depends on the quantity. Message us and we'll tell you right away if your date is available."
+        },
+        "zona": {
+          "question": "Do you only work in Catania?",
+          "answer": "We style events in Catania and the surrounding area. Our handmade creations ship across Italy and abroad."
+        },
+        "personalizzare": {
+          "question": "Can I personalise a creation?",
+          "answer": "Yes, it's what we love doing most: names, dates, colours and materials are chosen together."
+        },
+        "informazioni": {
+          "question": "How can I get more information?",
+          "answer": "Message us on WhatsApp or social media with the type of event, the date and an idea of the style you like: we'll answer any question."
+        }
+      }
+    },
+    "cta": {
+      "title": "Let's take the first step",
+      "text": "Message us on WhatsApp: it's the quickest way to tell us your idea."
+    }
+  },
+  "photos": {
+    "sposiArcoCuore": "Wedding setup with a gold heart-shaped arch and a cut-out of the couple, flowers, a sugared almond bar, balloons and white lanterns",
+    "battesimoAzzurro": "Light blue christening setup with draped fabric, balloons, the name Francesco, a gold angel and favours",
+    "battesimoMinnie": "Pink Minnie Mouse themed setup with balloons, a cake, white columns and character cut-outs",
+    "battesimoPiccoloPrincipe": "Little Prince themed setup with a cake, columns, balloons, a gold number 1 and character cut-outs",
+    "cameraSposa": "Bride's room decorated with silver and white balloons, the word Bride on the bed and a wedding dress hanging up",
+    "tortaComunione": "First communion cake with a Little Prince theme, featuring the fox, an aeroplane and a quote about the rose",
+    "tortaPiccoloPrincipe": "Tiered Little Prince cake with gold stars, a personalised bottle and a favour with a teddy bear",
+    "alberoPlexiglass": "Mirrored plexiglass tree with hearts bearing the children's names and a tulip plaque, a personalised gift for a teacher",
+    "annaffiatoio": "White plaster watering can decorated with dried flowers, hydrangeas and handmade decorative flowers",
+    "barattoloGesso": "White plaster jar with a green bow and handmade decorative flowers on a gold table runner",
+    "borsetta": "Arrangement in a white handbag with a bust, a butterfly and handmade decorative flowers in shades of red, with dried flowers and palm leaves",
+    "candeleSucculente": "White plaster pot with green succulent-shaped candles, tied with twine, next to white flowers",
+    "fioccoNascita": "Light blue birth bow with the name Damiano in gold plexiglass, a teddy bear and flowers, next to a matching favour",
+    "palloncini70": "Green balloon arrangement with a gold number 70, an arch decorated with leaves and lemons, and matching favours",
+    "genderReveal": "Gender reveal balloon arrangement with two babies, a pink and blue column and a black balloon with question marks",
+    "team": "The Creation for Passion team arranging handmade favours on a table during an event",
+    "labScatoleCandele": "Workshop table with gift boxes, candles, pink ribbons and a hand closing a package",
+    "labConfezioneRegalo": "Hands tying a pink ribbon on a gift box, among sugared almonds and dried flowers",
+    "labCandelaEtichetta": "Hands applying a label to a glass candle, next to wooden keyrings ready to be personalised",
+    "labTavoloFiocco": "Workbench with a wooden hoop, pink ribbon, gold scissors, coloured card and a cutting machine"
+  },
+  "language": {
+    "label": "Language"
+  }
+}
