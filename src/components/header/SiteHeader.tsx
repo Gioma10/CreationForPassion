@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { DesktopNav } from "@/components/header/DesktopNav";
 import { MobileNav } from "@/components/header/MobileNav";
 import { useHideOnScroll } from "@/components/header/use-hide-on-scroll";
@@ -11,6 +12,8 @@ const whatsapp = socials.find((social) => social.name === "WhatsApp")!;
 
 export function SiteHeader() {
   const { hidden, scrolled, show } = useHideOnScroll();
+  // The home shows the logo alone; every other page opens the navigation out of it.
+  const isHome = usePathname() === "/";
 
   return (
     <>
@@ -25,8 +28,8 @@ export function SiteHeader() {
         )}
       >
         <div className="mx-auto flex w-full max-w-5xl items-center px-5 md:justify-center md:px-6">
-          <MobileNav showTitle={scrolled} />
-          <DesktopNav hidden={hidden} />
+          <MobileNav showTitle={scrolled} collapsed={isHome} />
+          <DesktopNav open={!hidden && !isHome} />
         </div>
       </header>
 

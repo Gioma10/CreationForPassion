@@ -1,6 +1,6 @@
 import type { StaticImageData } from "next/image";
 import battesimoAzzurro from "@/assets/photos/allestimenti/allestimento-battesimo-azzurro-angelo.jpg";
-import borsetta from "@/assets/photos/handmade/borsetta-fiori-cera-busto.jpg";
+import borsetta from "@/assets/photos/artigianato/borsetta-fiori-cera-busto.jpg";
 import gender from "@/assets/photos/eventi/palloncini-gender-reveal-bebe.jpg";
 
 export const site = {
@@ -30,7 +30,7 @@ export const pages = [
       "Allestimenti per matrimoni, battesimi, comunioni, compleanni e feste a Catania, progettati e realizzati su misura.",
   },
   {
-    href: "/handmade",
+    href: "/artigianato",
     title: "Creazioni artigianali fatte a mano",
     description:
       "Bomboniere, candele e gesso, composizioni di palloncini e gadget personalizzati fatti a mano. Spedizioni in Italia e all'estero.",
@@ -79,7 +79,7 @@ export const services = [
     title: "Artigianato",
     description:
       "Cerchi qualcosa fatto a mano? Iniziamo dalle creazioni che raccontano una storia.",
-    href: "/handmade",
+    href: "/artigianato",
     photo: {
       src: borsetta,
       alt: "Composizione in una borsetta bianca con busto, farfalla e fiori decorativi fatti a mano nei toni del rosso",

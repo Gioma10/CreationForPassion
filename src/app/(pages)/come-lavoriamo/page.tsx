@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ChevronDown } from "lucide-react";
 import allestimentoSposi from "@/assets/photos/allestimenti/allestimento-sposi-arco-cuore.jpg";
-import barattoloGesso from "@/assets/photos/handmade/barattolo-gesso-fiocco.jpg";
+import barattoloGesso from "@/assets/photos/artigianato/barattolo-gesso-fiocco.jpg";
 import {
   CtaBand,
   PageHero,

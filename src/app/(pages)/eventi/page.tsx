@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Baby, Gift, Sparkles } from "lucide-react";
-import fioccoNascita from "@/assets/photos/handmade/fiocco-nascita-azzurro-nome.jpg";
+import fioccoNascita from "@/assets/photos/artigianato/fiocco-nascita-azzurro-nome.jpg";
 import gender from "@/assets/photos/eventi/palloncini-gender-reveal-bebe.jpg";
 import {
   CtaBand,

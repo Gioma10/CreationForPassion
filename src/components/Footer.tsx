@@ -31,7 +31,7 @@ export function Footer() {
           ))}
         </ul>
         <p className="text-xs text-foreground/60 max-md:px-16">
-          © {site.name} · Allestimenti a {site.city} · Creazioni handmade
+          © {site.name} · Allestimenti a {site.city} · Creazioni artigianali
           spedite in Italia e all&apos;estero
         </p>
       </div>

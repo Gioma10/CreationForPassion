@@ -22,7 +22,7 @@ const greatVibes = Great_Vibes({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Allestimenti per eventi a ${site.city} e creazioni handmade`,
+    default: `${site.name} | Allestimenti per eventi a ${site.city} e creazioni artigianali`,
     template: `%s | ${site.name}`,
   },
   description: site.description,

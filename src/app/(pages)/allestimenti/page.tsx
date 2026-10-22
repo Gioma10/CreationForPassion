@@ -5,7 +5,7 @@ import battesimoMinnie from "@/assets/photos/allestimenti/allestimento-battesimo
 import battesimoPiccoloPrincipe from "@/assets/photos/allestimenti/allestimento-battesimo-piccolo-principe.jpg";
 import cameraSposa from "@/assets/photos/allestimenti/allestimento-camera-sposa-palloncini.jpg";
 import allestimentoSposi from "@/assets/photos/allestimenti/allestimento-sposi-arco-cuore.jpg";
-import palloncini70 from "@/assets/photos/handmade/palloncini-70-anni-limoni.jpg";
+import palloncini70 from "@/assets/photos/artigianato/palloncini-70-anni-limoni.jpg";
 import gender from "@/assets/photos/eventi/palloncini-gender-reveal-bebe.jpg";
 import tortaComunione from "@/assets/photos/allestimenti/torta-prima-comunione-piccolo-principe.jpg";
 import tortaPiccoloPrincipe from "@/assets/photos/allestimenti/torta-piccolo-principe-bomboniera.jpg";

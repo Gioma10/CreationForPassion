@@ -10,8 +10,10 @@ import { navLinks } from "@/lib/site";
 
 gsap.registerPlugin(useGSAP);
 
-// Logo on the left; the link pill opens out of it to the right, and folds back while the header is hidden.
-export function DesktopNav({ hidden }: { hidden: boolean }) {
+// Closed, the logo sits alone at the center. Opening, the group slides so the logo moves left while the
+// link pill opens out of it to the right; it folds back while the header is hidden.
+// `--open` (0 → 1) drives the slide in CSS, so the closed logo is centered from the first server-rendered paint.
+export function DesktopNav({ open }: { open: boolean }) {
   const pathname = usePathname();
   const root = useRef<HTMLDivElement>(null);
   const tl = useRef<gsap.core.Timeline>(null);
@@ -20,10 +22,12 @@ export function DesktopNav({ hidden }: { hidden: boolean }) {
     () => {
       tl.current = gsap
         .timeline({ paused: true, defaults: { ease: "power3.out" } })
+        .fromTo(root.current, { "--open": 0 }, { "--open": 1, duration: 0.55 })
         .fromTo(
           ".nav-pill",
           { clipPath: "inset(0% 100% 0% 0% round 9999px)" },
           { clipPath: "inset(0% 0% 0% 0% round 9999px)", duration: 0.55 },
+          0,
         )
         .fromTo(
           ".nav-pill a",
@@ -39,16 +43,19 @@ export function DesktopNav({ hidden }: { hidden: boolean }) {
     const timeline = tl.current;
     if (!timeline) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      timeline.progress(hidden ? 0 : 1).pause();
-    } else if (hidden) {
-      timeline.reverse();
-    } else {
+      timeline.progress(open ? 1 : 0).pause();
+    } else if (open) {
       timeline.play();
+    } else {
+      timeline.reverse();
     }
-  }, [hidden]);
+  }, [open]);
 
   return (
-    <div ref={root} className="hidden items-center md:flex">
+    <div
+      ref={root}
+      className="hidden items-center [--open:0] [translate:calc((1-var(--open))*(100%-4rem)/2)_0] md:flex"
+    >
       <NavLogo />
       <nav
         aria-label="Navigazione principale"

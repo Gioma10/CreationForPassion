@@ -249,7 +249,7 @@ function ServicesHeroView() {
         {isDeck ? (
           <div key="deck" className="view-copy flex flex-col items-start">
             <p className="flex items-center gap-3 text-xs font-semibold tracking-widest text-wine uppercase">
-              Allestimenti & handmade
+              Allestimenti & artigianato
               <span className="h-px w-8 bg-wine/60" />
             </p>
             <h1 className="mt-4 max-w-xl text-[clamp(1.625rem,4.5dvh,2rem)] md:text-[clamp(1.75rem,5.5dvh,2.75rem)] leading-tight tracking-tight text-balance text-wine">

@@ -10,17 +10,17 @@ import {
   WhatsAppButton,
   cardShadow,
 } from "@/components/page-parts";
-import alberoPlexiglass from "@/assets/photos/handmade/albero-plexiglass-maestra.jpg";
-import annaffiatoio from "@/assets/photos/handmade/annaffiatoio-gesso-fiori-secchi.jpg";
-import barattoloGesso from "@/assets/photos/handmade/barattolo-gesso-fiocco.jpg";
-import borsetta from "@/assets/photos/handmade/borsetta-fiori-cera-busto.jpg";
-import candeleSucculente from "@/assets/photos/handmade/candele-succulente-vaso-gesso.jpg";
-import fioccoNascita from "@/assets/photos/handmade/fiocco-nascita-azzurro-nome.jpg";
-import palloncini from "@/assets/photos/handmade/palloncini-70-anni-limoni.jpg";
+import alberoPlexiglass from "@/assets/photos/artigianato/albero-plexiglass-maestra.jpg";
+import annaffiatoio from "@/assets/photos/artigianato/annaffiatoio-gesso-fiori-secchi.jpg";
+import barattoloGesso from "@/assets/photos/artigianato/barattolo-gesso-fiocco.jpg";
+import borsetta from "@/assets/photos/artigianato/borsetta-fiori-cera-busto.jpg";
+import candeleSucculente from "@/assets/photos/artigianato/candele-succulente-vaso-gesso.jpg";
+import fioccoNascita from "@/assets/photos/artigianato/fiocco-nascita-azzurro-nome.jpg";
+import palloncini from "@/assets/photos/artigianato/palloncini-70-anni-limoni.jpg";
 import { pageByHref } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-const page = pageByHref("/handmade");
+const page = pageByHref("/artigianato");
 
 export const metadata: Metadata = {
   title: page.title,
@@ -85,7 +85,7 @@ const customOptions = [
   "Confezione regalo",
 ];
 
-export default function HandmadePage() {
+export default function ArtigianatoPage() {
   return (
     <PageShell>
       <section className="grid items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-14">

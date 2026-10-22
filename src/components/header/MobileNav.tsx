@@ -13,15 +13,27 @@ import { cn } from "@/lib/utils";
 gsap.registerPlugin(useGSAP);
 
 // Logo on the left, menu toggle on the right, current page title between them once the page is scrolled.
-export function MobileNav({ showTitle }: { showTitle: boolean }) {
+// Collapsed (the home), the logo sits alone at the center; `--open` (0 → 1) slides it left as the toggle appears.
+export function MobileNav({ showTitle, collapsed }: { showTitle: boolean; collapsed: boolean }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const title = navLinks.find((link) => link.href === pathname)?.label;
   const root = useRef<HTMLDivElement>(null);
   const tl = useRef<gsap.core.Timeline>(null);
+  const reveal = useRef<gsap.core.Timeline>(null);
 
   useGSAP(
     () => {
+      reveal.current = gsap
+        .timeline({ paused: true, defaults: { ease: "power3.out" } })
+        .fromTo(root.current, { "--open": 0 }, { "--open": 1, duration: 0.55 })
+        .fromTo(
+          ".menu-toggle",
+          { autoAlpha: 0, scale: 0.6 },
+          { autoAlpha: 1, scale: 1, duration: 0.35 },
+          "-=0.25",
+        );
+
       tl.current = gsap
         .timeline({ paused: true, defaults: { ease: "power3.out" } })
         .fromTo(
@@ -52,6 +64,18 @@ export function MobileNav({ showTitle }: { showTitle: boolean }) {
   }, [open]);
 
   useEffect(() => {
+    const timeline = reveal.current;
+    if (!timeline) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      timeline.progress(collapsed ? 0 : 1).pause();
+    } else if (collapsed) {
+      timeline.reverse();
+    } else {
+      timeline.play();
+    }
+  }, [collapsed]);
+
+  useEffect(() => {
     if (!open) return;
     const onPointerDown = (event: PointerEvent) => {
       if (!root.current?.contains(event.target as Node)) setOpen(false);
@@ -71,8 +95,10 @@ export function MobileNav({ showTitle }: { showTitle: boolean }) {
   useLayoutEffect(() => () => setOpen(false), []);
 
   return (
-    <div ref={root} className="relative flex w-full items-center gap-3 md:hidden">
-      <NavLogo />
+    <div ref={root} className="@container relative flex w-full items-center gap-3 [--open:0] md:hidden">
+      <div className="shrink-0 [translate:calc((1-var(--open))*(50cqw-50%))_0]">
+        <NavLogo />
+      </div>
       <p
         aria-hidden={!showTitle}
         className={cn(
@@ -88,7 +114,7 @@ export function MobileNav({ showTitle }: { showTitle: boolean }) {
         aria-expanded={open}
         aria-controls="mobile-menu"
         aria-label={open ? "Chiudi menu" : "Apri menu"}
-        className="pointer-events-auto grid size-11 place-items-center rounded-full bg-blush text-wine transition-transform duration-150 ease-out outline-none focus-visible:ring-2 focus-visible:ring-rose active:scale-90"
+        className="menu-toggle pointer-events-auto invisible grid size-11 place-items-center rounded-full bg-blush text-wine transition-transform duration-150 ease-out outline-none focus-visible:ring-2 focus-visible:ring-rose active:scale-90"
       >
         {open ? <X className="size-5" /> : <Menu className="size-5" />}
       </button>
