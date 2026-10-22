@@ -6,15 +6,17 @@ import {
   PageHero,
   PageShell,
   Photo,
-  PhotoPlaceholder,
   SectionHeading,
   WhatsAppButton,
   cardShadow,
 } from "@/components/page-parts";
-import annaffiatoio from "@/assets/photos/annaffiatoio-gesso-fiori-secchi.jpg";
-import barattoloGesso from "@/assets/photos/barattolo-gesso-fiocco.jpg";
-import borsetta from "@/assets/photos/borsetta-fiori-cera-busto.jpg";
-import palloncini from "@/assets/photos/palloncini-70-anni-limoni.jpg";
+import alberoPlexiglass from "@/assets/photos/handmade/albero-plexiglass-maestra.jpg";
+import annaffiatoio from "@/assets/photos/handmade/annaffiatoio-gesso-fiori-secchi.jpg";
+import barattoloGesso from "@/assets/photos/handmade/barattolo-gesso-fiocco.jpg";
+import borsetta from "@/assets/photos/handmade/borsetta-fiori-cera-busto.jpg";
+import candeleSucculente from "@/assets/photos/handmade/candele-succulente-vaso-gesso.jpg";
+import fioccoNascita from "@/assets/photos/handmade/fiocco-nascita-azzurro-nome.jpg";
+import palloncini from "@/assets/photos/handmade/palloncini-70-anni-limoni.jpg";
 import { pageByHref } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -38,6 +40,11 @@ const categories = [
     title: "Bomboniere",
     text: "Piccoli ricordi da regalare ai tuoi ospiti, coordinati con i colori e lo stile della festa.",
     tags: ["Matrimoni", "Battesimi", "Comunioni", "Lauree"],
+    photo: {
+      src: fioccoNascita,
+      alt: "Fiocco nascita azzurro con nome Damiano in plexiglass dorato, orsetto e fiori, accanto a una bomboniera coordinata",
+      position: "center 40%",
+    },
   },
   {
     title: "Candele e gesso",
@@ -62,6 +69,10 @@ const categories = [
     title: "Gadget personalizzati",
     text: "Gadget con nomi, date o iniziali, da tenere per te o da regalare.",
     tags: ["Regali", "Eventi", "Personalizzati"],
+    photo: {
+      src: alberoPlexiglass,
+      alt: "Albero in plexiglass a specchio con cuori e nomi dei bambini e targa a tulipano, regalo personalizzato per la maestra",
+    },
   },
 ];
 
@@ -103,7 +114,14 @@ export default function HandmadePage() {
             sizes="(min-width: 768px) 14rem, 45vw"
             className="aspect-square rounded-[1.75rem]"
           />
-          <PhotoPlaceholder className="aspect-square rounded-[1.75rem] bg-rose/40" />
+          <Photo
+            cover
+            src={candeleSucculente}
+            alt="Vaso in gesso bianco con candele a forma di piante grasse verdi, legato con spago, accanto a fiori bianchi"
+            position="center 30%"
+            sizes="(min-width: 768px) 14rem, 45vw"
+            className="aspect-square rounded-[1.75rem]"
+          />
         </div>
       </section>
 
@@ -129,17 +147,13 @@ export default function HandmadePage() {
             className="grid items-center gap-6 md:grid-cols-2 md:gap-14"
           >
             <div className={cn("rounded-[2rem] bg-card p-3", cardShadow, i % 2 === 1 && "md:order-2")}>
-              {category.photo ? (
-                <Photo
-                  src={category.photo.src}
-                  alt={category.photo.alt}
-                  position={category.photo.position}
-                  sizes="(min-width: 768px) 32rem, 100vw"
-                  className="aspect-4/3 rounded-[1.5rem]"
-                />
-              ) : (
-                <PhotoPlaceholder className="aspect-4/3 rounded-[1.5rem]" />
-              )}
+              <Photo
+                src={category.photo.src}
+                alt={category.photo.alt}
+                position={category.photo.position}
+                sizes="(min-width: 768px) 32rem, 100vw"
+                className="aspect-4/3 rounded-[1.5rem]"
+              />
             </div>
             <div>
               <span className="text-sm font-semibold text-rose-foreground">

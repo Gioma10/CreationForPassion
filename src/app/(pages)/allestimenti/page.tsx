@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
 import { Check } from "lucide-react";
-import allestimentoSposi from "@/assets/photos/allestimento-sposi-arco-cuore.jpg";
+import battesimoAzzurro from "@/assets/photos/allestimenti/allestimento-battesimo-azzurro-angelo.jpg";
+import battesimoMinnie from "@/assets/photos/allestimenti/allestimento-battesimo-minnie-rosa.jpg";
+import battesimoPiccoloPrincipe from "@/assets/photos/allestimenti/allestimento-battesimo-piccolo-principe.jpg";
+import cameraSposa from "@/assets/photos/allestimenti/allestimento-camera-sposa-palloncini.jpg";
+import allestimentoSposi from "@/assets/photos/allestimenti/allestimento-sposi-arco-cuore.jpg";
+import palloncini70 from "@/assets/photos/handmade/palloncini-70-anni-limoni.jpg";
+import gender from "@/assets/photos/eventi/palloncini-gender-reveal-bebe.jpg";
+import tortaComunione from "@/assets/photos/allestimenti/torta-prima-comunione-piccolo-principe.jpg";
+import tortaPiccoloPrincipe from "@/assets/photos/allestimenti/torta-piccolo-principe-bomboniera.jpg";
 import {
   CtaBand,
   OutlineLink,
   PageHero,
   PageShell,
   Photo,
-  PhotoPlaceholder,
   SectionHeading,
   WhatsAppButton,
   cardShadow,
@@ -27,14 +34,50 @@ const occasions = [
   {
     title: "Matrimoni",
     text: "Tavoli, centrotavola e dettagli floreali coordinati, per un giorno che ti somigli in ogni angolo.",
+    photo: {
+      src: cameraSposa,
+      alt: "Camera della sposa allestita con palloncini argento e bianchi, scritta Bride sul letto e abito da sposa appeso",
+    },
   },
   {
     title: "Battesimi e comunioni",
     text: "Atmosfere delicate, colori tenui e piccoli dettagli fatti a mano per festeggiare in famiglia.",
+    photo: {
+      src: battesimoAzzurro,
+      alt: "Allestimento per battesimo in azzurro con drappeggi, palloncini, nome Francesco, angelo dorato e bomboniere",
+    },
   },
   {
     title: "Compleanni e feste",
     text: "Allestimenti a tema per ogni età, dal primo compleanno alle feste con gli amici.",
+    photo: {
+      src: palloncini70,
+      alt: "Composizione di palloncini verdi con il numero 70 dorato, arco decorato con foglie e limoni e bomboniere coordinate",
+      position: "center 55%",
+    },
+  },
+];
+
+const gallery = [
+  {
+    src: battesimoPiccoloPrincipe,
+    alt: "Allestimento a tema Piccolo Principe con torta, colonne, palloncini, numero 1 dorato e sagome dei personaggi",
+  },
+  {
+    src: battesimoMinnie,
+    alt: "Allestimento rosa a tema Minnie con palloncini, torta, colonne bianche e sagome dei personaggi",
+  },
+  {
+    src: tortaPiccoloPrincipe,
+    alt: "Torta a piani a tema Piccolo Principe con stelle dorate, bottiglia personalizzata e bomboniera con orsetto",
+  },
+  {
+    src: tortaComunione,
+    alt: "Torta per la prima comunione a tema Piccolo Principe con volpe, aeroplano e citazione sulla rosa",
+  },
+  {
+    src: gender,
+    alt: "Composizione di palloncini per gender reveal con due bebè, colonna rosa e azzurra e palloncino nero con punti interrogativi",
   },
 ];
 
@@ -88,7 +131,13 @@ export default function AllestimentiPage() {
         <ul className="grid gap-6 md:grid-cols-3">
           {occasions.map((occasion) => (
             <li key={occasion.title} className={`flex flex-col rounded-[1.75rem] bg-card p-3 ${cardShadow}`}>
-              <PhotoPlaceholder className="aspect-4/3 rounded-[1.25rem]" />
+              <Photo
+                src={occasion.photo.src}
+                alt={occasion.photo.alt}
+                position={occasion.photo.position}
+                sizes="(min-width: 768px) 20rem, 100vw"
+                className="aspect-4/3 rounded-[1.25rem]"
+              />
               <div className="px-2 pt-4 pb-2">
                 <h3 className="text-xl leading-tight font-bold text-wine">{occasion.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-foreground/75">{occasion.text}</p>
@@ -115,9 +164,12 @@ export default function AllestimentiPage() {
       <section className="flex flex-col gap-8">
         <SectionHeading eyebrow="Lavori realizzati" title="Alcuni nostri allestimenti" />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-          {Array.from({ length: 5 }, (_, i) => (
-            <PhotoPlaceholder
-              key={i}
+          {gallery.map((photo, i) => (
+            <Photo
+              key={photo.alt}
+              src={photo.src}
+              alt={photo.alt}
+              sizes={i === 0 ? "(min-width: 768px) 48rem, 100vw" : "(min-width: 768px) 30rem, 80vw"}
               className={`rounded-[1.5rem] ${i === 0 ? "row-span-2 aspect-auto" : "aspect-square"}`}
             />
           ))}

@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import { Flower2, Heart, Ruler } from "lucide-react";
-import teamPhoto from "@/assets/photos/team-bomboniere-evento.jpg";
+import candelaEtichetta from "@/assets/photos/chi-siamo/laboratorio-candela-etichetta.jpg";
+import confezioneRegalo from "@/assets/photos/chi-siamo/laboratorio-confezione-regalo-nastro.jpg";
+import scatoleCandele from "@/assets/photos/chi-siamo/laboratorio-scatole-candele.jpg";
+import tavoloFiocco from "@/assets/photos/chi-siamo/laboratorio-tavolo-fiocco-cerchio.jpg";
+import teamPhoto from "@/assets/photos/chi-siamo/team-bomboniere-evento.jpg";
 import {
   CtaBand,
   OutlineLink,
   PageHero,
   PageShell,
   Photo,
-  PhotoPlaceholder,
   SectionHeading,
   cardShadow,
 } from "@/components/page-parts";
@@ -100,10 +103,31 @@ export default function ChiSiamoPage() {
       <section className="flex flex-col gap-8">
         <SectionHeading eyebrow="Dietro le quinte" title="Il nostro laboratorio" />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          <PhotoPlaceholder className="col-span-2 aspect-video rounded-[1.5rem] md:row-span-2 md:aspect-auto" />
-          <PhotoPlaceholder className="aspect-square rounded-[1.5rem]" />
-          <PhotoPlaceholder className="aspect-square rounded-[1.5rem]" />
-          <PhotoPlaceholder className="col-span-2 aspect-video rounded-[1.5rem]" />
+          <Photo
+            src={scatoleCandele}
+            alt="Tavolo del laboratorio con scatole regalo, candele, nastri rosa e una mano che chiude un pacchetto"
+            position="center 60%"
+            sizes="(min-width: 768px) 32rem, 100vw"
+            className="col-span-2 aspect-video rounded-[1.5rem] md:row-span-2 md:aspect-auto"
+          />
+          <Photo
+            src={confezioneRegalo}
+            alt="Mani che annodano un nastro rosa su una scatola regalo, tra confetti e fiori secchi"
+            sizes="(min-width: 768px) 16rem, 50vw"
+            className="aspect-square rounded-[1.5rem]"
+          />
+          <Photo
+            src={candelaEtichetta}
+            alt="Mani che applicano un'etichetta su una candela in vetro, accanto a portachiavi in legno da personalizzare"
+            sizes="(min-width: 768px) 16rem, 50vw"
+            className="aspect-square rounded-[1.5rem]"
+          />
+          <Photo
+            src={tavoloFiocco}
+            alt="Banco di lavoro con cerchio in legno, nastro rosa, forbici dorate, cartoncini colorati e plotter da taglio"
+            sizes="(min-width: 768px) 32rem, 100vw"
+            className="col-span-2 aspect-video rounded-[1.5rem]"
+          />
         </div>
         <div className="flex flex-wrap gap-3">
           <OutlineLink href="/come-lavoriamo">Come lavoriamo</OutlineLink>

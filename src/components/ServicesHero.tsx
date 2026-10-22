@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -7,7 +8,7 @@ import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { Flip } from "gsap/Flip";
 import { useGSAP } from "@gsap/react";
-import { ArrowLeft, ArrowRight, ArrowUpRight, ImageIcon } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HOME_RESET_EVENT } from "@/lib/home-reset";
 import { cn } from "@/lib/utils";
@@ -346,9 +347,16 @@ function ServiceCard({
 
   const face = (
     <>
-      {/* TODO: replace with next/image once real photos are available. */}
-      <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden rounded-[6cqw] bg-blush text-wine/40">
-        <ImageIcon className="size-[11cqw] transition-transform duration-500 ease-out group-hover:scale-110" />
+      <div className="relative min-h-0 flex-1 overflow-hidden rounded-[6cqw] bg-blush">
+        <Image
+          src={service.photo.src}
+          alt={service.photo.alt}
+          fill
+          placeholder="blur"
+          sizes="(min-width: 768px) 24rem, 72vw"
+          draggable={false}
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+        />
       </div>
       <div className="flex shrink-0 flex-col px-[3cqw] pt-[5cqw] pb-[3cqw]">
         <h3 className="text-[7cqw] leading-tight font-bold text-wine">{service.title}</h3>

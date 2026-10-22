@@ -1,3 +1,8 @@
+import type { StaticImageData } from "next/image";
+import battesimoAzzurro from "@/assets/photos/allestimenti/allestimento-battesimo-azzurro-angelo.jpg";
+import borsetta from "@/assets/photos/handmade/borsetta-fiori-cera-busto.jpg";
+import gender from "@/assets/photos/eventi/palloncini-gender-reveal-bebe.jpg";
+
 export const site = {
   name: "Creation for Passion",
   // TODO: replace with the real domain before going live (used for canonical URLs, sitemap, Open Graph).
@@ -47,7 +52,7 @@ export const pages = [
 export const navLinks = [
   { href: "/allestimenti", label: "Allestimenti" },
   { href: "/handmade", label: "Artigianato" },
-  { href: "/prodotti-digitali", label: "Prodotti digitali" },
+  { href: "/eventi", label: "Eventi" },
   { href: "/chi-siamo", label: "Chi siamo" },
   { href: "/come-lavoriamo", label: "Come lavoriamo" },
 ] as const;
@@ -56,27 +61,39 @@ export type Service = {
   title: string;
   description: string;
   href: string;
+  photo: { src: StaticImageData; alt: string };
 };
 
-// TODO: add a real photo for each service (next/image `src` + descriptive alt).
 export const services = [
   {
     title: "Allestimenti",
     description:
       "Hai bisogno di un'atmosfera pensata per un evento a Catania? Iniziamo da qui.",
     href: "/allestimenti",
+    photo: {
+      src: battesimoAzzurro,
+      alt: "Allestimento per battesimo in azzurro con drappeggi, palloncini, nome Francesco, angelo dorato e bomboniere",
+    },
   },
   {
     title: "Artigianato",
     description:
       "Cerchi qualcosa fatto a mano? Iniziamo dalle creazioni che raccontano una storia.",
     href: "/handmade",
+    photo: {
+      src: borsetta,
+      alt: "Composizione in una borsetta bianca con busto, farfalla e fiori decorativi fatti a mano nei toni del rosso",
+    },
   },
   {
-    title: "Prodotti digitali",
+    title: "Eventi",
     description:
-      "Hai bisogno di qualcosa pensato per il digitale? Iniziamo dalle proposte più adatte.",
-    href: "/prodotti-digitali",
+      "Gender reveal, baby shower o bomboniere last minute? Iniziamo dalla tua festa.",
+    href: "/eventi",
+    photo: {
+      src: gender,
+      alt: "Composizione di palloncini per gender reveal con due bebè, colonna rosa e azzurra e palloncino nero con punti interrogativi",
+    },
   },
 ] as const satisfies readonly Service[];
 

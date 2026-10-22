@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
 import { ChevronDown } from "lucide-react";
-import { CtaBand, PageHero, PageShell, SectionHeading, WhatsAppButton } from "@/components/page-parts";
+import allestimentoSposi from "@/assets/photos/allestimenti/allestimento-sposi-arco-cuore.jpg";
+import barattoloGesso from "@/assets/photos/handmade/barattolo-gesso-fiocco.jpg";
+import {
+  CtaBand,
+  PageHero,
+  PageShell,
+  Photo,
+  SectionHeading,
+  WhatsAppButton,
+  cardShadow,
+} from "@/components/page-parts";
 import { pageByHref } from "@/lib/site";
 
 const page = pageByHref("/come-lavoriamo");
@@ -57,7 +67,7 @@ const faqs = [
 export default function ComeLavoriamoPage() {
   return (
     <PageShell>
-      <section className="max-w-2xl">
+      <section className="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr] md:gap-14">
         <PageHero
           eyebrow="Come lavoriamo"
           title="Dal primo messaggio al giorno della festa"
@@ -65,14 +75,37 @@ export default function ComeLavoriamoPage() {
         >
           <WhatsAppButton />
         </PageHero>
+
+        <div className="relative mx-auto grid w-full max-w-md grid-cols-[1.15fr_1fr] items-center gap-4">
+          <div className={`rounded-[2rem] bg-card p-3 ${cardShadow}`}>
+            <Photo
+              cover
+              src={allestimentoSposi}
+              sizes="(min-width: 768px) 15rem, 50vw"
+              alt="Allestimento con arco a cuore dorato e sagoma degli sposi, fiori, confettata, palloncini e lanterne bianche"
+              className="aspect-3/4 rounded-[1.5rem]"
+            />
+          </div>
+          <div className={`translate-y-8 rotate-3 rounded-[2rem] bg-card p-3 ${cardShadow}`}>
+            <Photo
+              src={barattoloGesso}
+              sizes="(min-width: 768px) 13rem, 45vw"
+              alt="Barattolo in gesso bianco con fiocco verde e fiori decorativi fatti a mano su un runner dorato"
+              className="aspect-4/5 rounded-[1.5rem]"
+            />
+          </div>
+        </div>
       </section>
 
       <section className="flex flex-col gap-10">
         <SectionHeading eyebrow="Il percorso" title="Quattro passi insieme" />
-        <ol className="relative flex flex-col gap-10 md:gap-12">
-          <span aria-hidden className="absolute top-2 bottom-2 left-6 w-px bg-wine/15 md:left-8" />
+        <ol className="relative grid gap-10 md:grid-cols-2 md:gap-6">
+          <span aria-hidden className="absolute top-2 bottom-2 left-6 w-px bg-wine/15 md:hidden" />
           {steps.map((step, i) => (
-            <li key={step.title} className="relative grid grid-cols-[3rem_1fr] gap-5 md:grid-cols-[4rem_1fr] md:gap-8">
+            <li
+              key={step.title}
+              className="relative grid grid-cols-[3rem_1fr] gap-5 md:grid-cols-[4rem_1fr] md:gap-6 md:rounded-[1.75rem] md:bg-blush md:p-8"
+            >
               <span className="grid size-12 place-items-center rounded-full bg-wine text-lg font-bold text-background md:size-16 md:text-2xl">
                 {i + 1}
               </span>
