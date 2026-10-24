@@ -17,6 +17,7 @@
       "allestimenti": "Allestimenti",
       "fattoAMano": "Fatto a mano",
       "eventi": "Eventi",
+      "prodottiDigitali": "Prodotti digitali",
       "chiSiamo": "Chi siamo",
       "comeLavoriamo": "Come nascono"
     }
@@ -225,6 +226,39 @@
     "cta": {
       "title": "Anche tu stai pensando a una festa?",
       "text": "Scrivici su WhatsApp: ci fa piacere sentire la tua idea e raccontarti le nostre."
+    }
+  },
+  "prodottiDigitali": {
+    "meta": {
+      "title": "Prodotti digitali: inviti e QR code",
+      "description": "Inviti digitali per matrimoni, compleanni e battesimi e QR code per ristoranti, bar ed eventi, con lo stesso stile delle nostre creazioni fatte a mano."
+    },
+    "hero": {
+      "eyebrow": "Prodotti digitali",
+      "title": "Inviti e QR code, con la stessa cura del fatto a mano",
+      "intro": "Non tutto nasce tra carta, nastri e gesso: alcune creazioni le disegniamo per lo schermo. Inviti da mandare con un messaggio e QR code che portano i tuoi ospiti dove vuoi tu."
+    },
+    "items": {
+      "inviti": {
+        "title": "Inviti digitali",
+        "text": "Inviti per matrimoni, compleanni e battesimi da condividere su WhatsApp o via email, con i colori e lo stile della festa. Coordinati con l'allestimento, se vuoi."
+      },
+      "qrCode": {
+        "title": "QR code per ristoranti e locali",
+        "text": "QR code per il menù, la lista vini o i contatti del tuo locale, stampati su segnaposto e cartoncini pensati per stare bene sui tavoli."
+      }
+    },
+    "tags": {
+      "matrimoni": "Matrimoni",
+      "compleanni": "Compleanni",
+      "battesimi": "Battesimi",
+      "ristoranti": "Ristoranti",
+      "bar": "Bar",
+      "eventi": "Eventi"
+    },
+    "cta": {
+      "title": "Ti serve un invito o un QR code?",
+      "text": "Scrivici su WhatsApp: raccontaci la tua idea e la disegniamo insieme."
     }
   },
   "chiSiamo": {

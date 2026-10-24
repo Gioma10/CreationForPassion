@@ -17,6 +17,7 @@
       "allestimenti": "Event styling",
       "fattoAMano": "Handmade",
       "eventi": "Events",
+      "prodottiDigitali": "Digital products",
       "chiSiamo": "About us",
       "comeLavoriamo": "How it starts"
     }
@@ -225,6 +226,39 @@
     "cta": {
       "title": "Thinking about a party too?",
       "text": "Message us on WhatsApp: we'd love to hear your idea and share ours."
+    }
+  },
+  "prodottiDigitali": {
+    "meta": {
+      "title": "Digital products: invitations and QR codes",
+      "description": "Digital invitations for weddings, birthdays and christenings and QR codes for restaurants, bars and events, in the same style as our handmade creations."
+    },
+    "hero": {
+      "eyebrow": "Digital products",
+      "title": "Invitations and QR codes, made with handmade care",
+      "intro": "Not everything starts with paper, ribbons and plaster: some creations we design for the screen. Invitations you send with a message and QR codes that take your guests wherever you want."
+    },
+    "items": {
+      "inviti": {
+        "title": "Digital invitations",
+        "text": "Invitations for weddings, birthdays and christenings to share on WhatsApp or by email, in the colours and style of the party. Matched to the setup, if you like."
+      },
+      "qrCode": {
+        "title": "QR codes for restaurants and venues",
+        "text": "QR codes for your menu, wine list or contact details, printed on place cards and table cards designed to look good on the table."
+      }
+    },
+    "tags": {
+      "matrimoni": "Weddings",
+      "compleanni": "Birthdays",
+      "battesimi": "Christenings",
+      "ristoranti": "Restaurants",
+      "bar": "Bars",
+      "eventi": "Events"
+    },
+    "cta": {
+      "title": "Need an invitation or a QR code?",
+      "text": "Message us on WhatsApp: tell us your idea and we'll design it together."
     }
   },
   "chiSiamo": {

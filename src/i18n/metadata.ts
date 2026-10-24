@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { getPathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
-type Href = "/" | "/allestimenti" | "/fatto-a-mano" | "/eventi" | "/chi-siamo" | "/come-lavoriamo" | "/privacy";
+type Href = "/" | "/allestimenti" | "/fatto-a-mano" | "/eventi" | "/prodotti-digitali" | "/chi-siamo" | "/come-lavoriamo" | "/privacy";
 
 // Canonical URL for this language plus hreflang links to every translation of the same page.
 export function localeAlternates(locale: Locale, href: Href): Metadata["alternates"] {
@@ -19,7 +19,7 @@ export function localeAlternates(locale: Locale, href: Href): Metadata["alternat
 
 export async function pageMetadata(
   locale: Locale,
-  namespace: "allestimenti" | "fattoAMano" | "eventi" | "chiSiamo" | "comeLavoriamo" | "privacy",
+  namespace: "allestimenti" | "fattoAMano" | "eventi" | "prodottiDigitali" | "chiSiamo" | "comeLavoriamo" | "privacy",
   href: Href,
 ): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: `${namespace}.meta` });

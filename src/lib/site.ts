@@ -25,6 +25,7 @@ export const navLinks = [
   { href: "/allestimenti", key: "allestimenti" },
   { href: "/fatto-a-mano", key: "fattoAMano" },
   { href: "/eventi", key: "eventi" },
+  { href: "/prodotti-digitali", key: "prodottiDigitali" },
   { href: "/chi-siamo", key: "chiSiamo" },
   { href: "/come-lavoriamo", key: "comeLavoriamo" },
 ] as const;
