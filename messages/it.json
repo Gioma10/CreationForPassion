@@ -6,7 +6,9 @@
   "common": {
     "whatsappCta": "Scrivici su WhatsApp",
     "howWeWork": "Come nascono le creazioni",
-    "close": "Chiudi"
+    "close": "Chiudi",
+    "seeCreations": "Guarda le creazioni",
+    "allHandmade": "Tutto il fatto a mano"
   },
   "nav": {
     "label": "Navigazione principale",
@@ -16,7 +18,9 @@
     "links": {
       "allestimenti": "Allestimenti",
       "fattoAMano": "Fatto a mano",
-      "eventi": "Eventi",
+      "bomboniere": "Bomboniere",
+      "candeleGesso": "Candele e gesso",
+      "gadgetPersonalizzati": "Gadget personalizzati",
       "prodottiDigitali": "Prodotti digitali",
       "chiSiamo": "Chi siamo",
       "comeLavoriamo": "Come nascono"
@@ -47,21 +51,21 @@
         "title": "Fatto a mano",
         "description": "Bomboniere, candele e gesso: le creazioni nate una alla volta nel nostro laboratorio."
       },
-      "eventi": {
-        "title": "Eventi",
-        "description": "Gender reveal, baby shower e bomboniere dell'ultimo minuto: le feste che ci hanno fatto emozionare."
+      "prodottiDigitali": {
+        "title": "Prodotti digitali",
+        "description": "Inviti digitali, landing page per matrimoni ed eventi e QR code per ristoranti, con lo stile del fatto a mano."
       }
     }
   },
   "allestimenti": {
     "meta": {
       "title": "Allestimenti per eventi a Catania",
-      "description": "Matrimoni, battesimi, comunioni, compleanni e feste a Catania: una raccolta degli allestimenti che abbiamo creato, con foto e dettagli."
+      "description": "Matrimoni, battesimi, comunioni, compleanni, gender reveal e baby shower a Catania: una raccolta degli allestimenti che abbiamo creato, con foto e dettagli."
     },
     "hero": {
       "eyebrow": "Allestimenti a Catania",
       "title": "Le feste che abbiamo allestito",
-      "intro": "Matrimoni, battesimi, comunioni, compleanni: ogni allestimento è nato da una storia, da una palette di colori e da tanti piccoli dettagli. Qui ne raccontiamo alcuni."
+      "intro": "Matrimoni, battesimi, compleanni, gender reveal e baby shower: ogni allestimento è nato da una storia, da una palette di colori e da tanti piccoli dettagli. Qui ne raccontiamo alcuni."
     },
     "occasions": {
       "eyebrow": "Le occasioni",
@@ -78,6 +82,14 @@
         "compleanni": {
           "title": "Compleanni e feste",
           "text": "Allestimenti a tema per ogni età, dal primo compleanno alle feste con gli amici."
+        },
+        "genderReveal": {
+          "title": "Gender reveal",
+          "text": "Fiocco rosa o azzurro? Allestimento, palloncini e una sorpresa preparata per svelarlo a tutti nel momento più emozionante."
+        },
+        "babyShower": {
+          "title": "Baby shower",
+          "text": "Una festa dolce per aspettare il nuovo arrivo: decorazioni, tavolo dei dolci e piccoli pensieri per gli invitati."
         }
       }
     },
@@ -118,17 +130,21 @@
     "cta": {
       "title": "Ti è piaciuto qualcosa?",
       "text": "Scrivici su WhatsApp: ci fa sempre piacere raccontarti un allestimento o sentire la tua idea."
+    },
+    "balloons": {
+      "title": "Composizioni di palloncini curate da un'esperta certificata",
+      "text": "Le nostre composizioni di palloncini sono curate da un'esperta con certificazione in balloon art: forme, colori e proporzioni studiate per far diventare i palloncini il cuore dell'allestimento."
     }
   },
   "fattoAMano": {
     "meta": {
       "title": "Creazioni fatte a mano",
-      "description": "Bomboniere, candele e gesso, composizioni di palloncini e oggetti personalizzati: le creazioni fatte a mano nel nostro laboratorio di Catania."
+      "description": "Bomboniere, candele e gesso e gadget personalizzati: le creazioni fatte a mano nel nostro laboratorio di Catania."
     },
     "hero": {
       "eyebrow": "Fatto a mano",
       "title": "Creazioni fatte a mano che raccontano una storia",
-      "intro": "Bomboniere, candele e gesso, composizioni di palloncini e oggetti personalizzati: ogni pezzo nasce a mano, con calma e con cura. Qui raccogliamo quelli a cui siamo più affezionati."
+      "intro": "Bomboniere, candele e gesso e gadget personalizzati: ogni pezzo nasce a mano, con calma e con cura. Qui raccogliamo quelli a cui siamo più affezionati."
     },
     "promises": {
       "handmade": {
@@ -156,12 +172,8 @@
           "title": "Candele e gesso",
           "text": "Candele e oggetti in gesso fatti a mano, da regalare, da tenere in casa o da trasformare in bomboniera."
         },
-        "palloncini": {
-          "title": "Composizioni di palloncini",
-          "text": "Archi e composizioni di palloncini per feste e ricorrenze, ogni volta con colori e forme diverse."
-        },
         "gadget": {
-          "title": "Oggetti personalizzati",
+          "title": "Gadget personalizzati",
           "text": "Oggetti con nomi, date o iniziali, pensati come regalo o come ricordo di un giorno speciale."
         }
       }
@@ -175,9 +187,6 @@
       "gesso": "Gesso",
       "bomboniere": "Bomboniere",
       "regali": "Regali",
-      "compleanni": "Compleanni",
-      "feste": "Feste",
-      "ricorrenze": "Ricorrenze",
       "eventi": "Eventi",
       "personalizzati": "Personalizzati"
     },
@@ -199,49 +208,123 @@
       "text": "Scrivici su WhatsApp: ci fa piacere raccontarti come è nata o sentire la tua idea."
     }
   },
-  "eventi": {
+  "bomboniere": {
     "meta": {
-      "title": "Eventi",
-      "description": "Gender reveal, baby shower e bomboniere dell'ultimo minuto: le feste che abbiamo preparato e che ci hanno emozionato."
+      "title": "Bomboniere fatte a mano",
+      "description": "Bomboniere fatte a mano per matrimoni, battesimi, comunioni e lauree, anche express: piccoli ricordi coordinati con lo stile della festa."
     },
     "hero": {
-      "eyebrow": "Eventi",
-      "title": "Le feste che ci hanno emozionato",
-      "intro": "Dalla sorpresa di un gender reveal alla dolcezza di un baby shower, fino alle bomboniere preparate di corsa: alcune delle feste che ci sono rimaste nel cuore."
+      "eyebrow": "Fatto a mano · Bomboniere",
+      "title": "Bomboniere fatte a mano, una per ogni ospite",
+      "intro": "Piccoli ricordi da portare a casa dopo la festa: le bomboniere le prepariamo a mano una alla volta, con i colori e lo stile dell'occasione. E quando il tempo è poco, ci sono quelle express."
     },
-    "items": {
-      "genderReveal": {
-        "title": "Gender reveal",
-        "text": "Fiocco rosa o azzurro? Allestimento, palloncini e una sorpresa preparata per svelarlo a tutti nel momento più emozionante."
+    "heading": {
+      "eyebrow": "Le nostre bomboniere",
+      "title": "Dalle classiche alle express"
+    },
+    "rows": {
+      "classiche": {
+        "title": "Bomboniere classiche",
+        "text": "Per matrimoni, battesimi, comunioni e lauree: statuine, scatoline e confetti, coordinati con l'allestimento e chiusi con il nastro giusto."
       },
-      "babyShower": {
-        "title": "Baby shower",
-        "text": "Una festa dolce per aspettare il nuovo arrivo: decorazioni, tavolo dei dolci e piccoli pensieri per gli invitati."
+      "gesso": {
+        "title": "Bomboniere in gesso e candele",
+        "text": "Barattoli, vasetti e piccoli oggetti in gesso, o candele profumate: bomboniere da tenere in casa che ricordano la festa ogni giorno."
       },
-      "bomboniereExpress": {
-        "title": "Bomboniere dell'ultimo minuto",
-        "text": "A volte le idee migliori nascono di corsa: bomboniere fatte a mano in pochi giorni, curate come tutte le altre."
+      "express": {
+        "title": "Bomboniere express",
+        "text": "A volte le feste si organizzano in pochi giorni: le bomboniere express sono fatte a mano di corsa, coordinate con i colori della festa e confezionate una per una, curate come tutte le altre."
       }
     },
     "cta": {
-      "title": "Anche tu stai pensando a una festa?",
-      "text": "Scrivici su WhatsApp: ci fa piacere sentire la tua idea e raccontarti le nostre."
+      "title": "Ti è piaciuta una bomboniera?",
+      "text": "Scrivici su WhatsApp: ci fa piacere raccontarti come è nata o sentire la tua idea."
+    }
+  },
+  "candeleGesso": {
+    "meta": {
+      "title": "Candele e gesso fatti a mano",
+      "description": "Candele, oggetti in gesso e composizioni con fiori secchi fatti a mano nel nostro laboratorio di Catania."
+    },
+    "hero": {
+      "eyebrow": "Fatto a mano · Candele e gesso",
+      "title": "Candele e gesso, tra profumi e fiori secchi",
+      "intro": "Candele colate a mano, oggetti in gesso e piccole composizioni con fiori secchi: creazioni da regalare, da tenere in casa o da trasformare in bomboniera."
+    },
+    "heading": {
+      "eyebrow": "Dal laboratorio",
+      "title": "Cosa nasce tra cera e gesso"
+    },
+    "rows": {
+      "candele": {
+        "title": "Candele",
+        "text": "Candele in vetro e candele dalle forme particolari, come le piante grasse, con etichette e nastri scelti ogni volta."
+      },
+      "gesso": {
+        "title": "Oggetti in gesso",
+        "text": "Annaffiatoi, barattoli e vasetti in gesso bianco, decorati con fiori secchi, ortensie e piccoli dettagli."
+      },
+      "fiori": {
+        "title": "Composizioni con fiori decorativi",
+        "text": "Composizioni con fiori decorativi fatti a mano, fiori secchi e foglie, pensate come regalo o come centrotavola."
+      }
+    },
+    "cta": {
+      "title": "Ti è piaciuta una creazione?",
+      "text": "Scrivici su WhatsApp: ci fa piacere raccontarti come è nata o sentire la tua idea."
+    }
+  },
+  "gadgetPersonalizzati": {
+    "meta": {
+      "title": "Gadget personalizzati fatti a mano",
+      "description": "Gadget personalizzati con nomi, date e iniziali: plexiglass, legno e confezioni regalo fatti a mano nel nostro laboratorio di Catania."
+    },
+    "hero": {
+      "eyebrow": "Fatto a mano · Gadget personalizzati",
+      "title": "Gadget personalizzati, con un nome sopra",
+      "intro": "Un nome, una data, un'iniziale: bastano pochi dettagli per trasformare un oggetto in un ricordo. Qui raccogliamo i gadget personalizzati nati nel laboratorio."
+    },
+    "heading": {
+      "eyebrow": "Dal laboratorio",
+      "title": "Piccoli oggetti, tutti diversi"
+    },
+    "rows": {
+      "plexiglass": {
+        "title": "Plexiglass",
+        "text": "Alberi, targhe e decorazioni in plexiglass con nomi e cuori, come il regalo di fine anno per la maestra."
+      },
+      "legno": {
+        "title": "Legno e portachiavi",
+        "text": "Portachiavi e piccoli oggetti in legno da personalizzare con nomi, iniziali e date."
+      },
+      "confezioni": {
+        "title": "Confezioni e biglietti",
+        "text": "Scatole, nastri, biglietti e tag pensati per accompagnare ogni regalo, tagliati e confezionati a mano."
+      }
+    },
+    "cta": {
+      "title": "Ti è piaciuto un gadget?",
+      "text": "Scrivici su WhatsApp: ci fa piacere raccontarti come è nato o sentire la tua idea."
     }
   },
   "prodottiDigitali": {
     "meta": {
       "title": "Prodotti digitali: inviti e QR code",
-      "description": "Inviti digitali per matrimoni, compleanni e battesimi e QR code per ristoranti, bar ed eventi, con lo stesso stile delle nostre creazioni fatte a mano."
+      "description": "Inviti digitali per matrimoni, compleanni e battesimi, landing page per matrimoni ed eventi e QR code per ristoranti e locali, con lo stile delle nostre creazioni fatte a mano."
     },
     "hero": {
       "eyebrow": "Prodotti digitali",
-      "title": "Inviti e QR code, con la stessa cura del fatto a mano",
-      "intro": "Non tutto nasce tra carta, nastri e gesso: alcune creazioni le disegniamo per lo schermo. Inviti da mandare con un messaggio e QR code che portano i tuoi ospiti dove vuoi tu."
+      "title": "Creazioni digitali, con la stessa cura del fatto a mano",
+      "intro": "Non tutto nasce tra carta, nastri e gesso: alcune creazioni le disegniamo per lo schermo. Inviti da mandare con un messaggio, pagine web per la tua festa e QR code che portano i tuoi ospiti dove vuoi tu."
     },
     "items": {
       "inviti": {
         "title": "Inviti digitali",
         "text": "Inviti per matrimoni, compleanni e battesimi da condividere su WhatsApp o via email, con i colori e lo stile della festa. Coordinati con l'allestimento, se vuoi."
+      },
+      "landing": {
+        "title": "Landing page per matrimoni ed eventi",
+        "text": "Una pagina web tutta per la vostra festa: programma, location con mappa, conferma della presenza e lista nozze, con lo stesso stile degli inviti."
       },
       "qrCode": {
         "title": "QR code per ristoranti e locali",
@@ -257,7 +340,7 @@
       "eventi": "Eventi"
     },
     "cta": {
-      "title": "Ti serve un invito o un QR code?",
+      "title": "Ti serve qualcosa di digitale?",
       "text": "Scrivici su WhatsApp: raccontaci la tua idea e la disegniamo insieme."
     }
   },
@@ -454,5 +537,11 @@
   },
   "language": {
     "label": "Lingua"
+  },
+  "digitalIllustration": {
+    "names": "Giulia & Marco",
+    "saveTheDate": "Save the date",
+    "rsvp": "RSVP",
+    "menu": "MENÙ"
   }
 }

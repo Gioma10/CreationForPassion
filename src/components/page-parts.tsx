@@ -5,7 +5,10 @@ import { SocialIcon } from "@/components/social-icon";
 import { socials } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-export { Photo } from "@/components/photo";
+import { Photo } from "@/components/photo";
+import type { PhotoId } from "@/lib/photos";
+
+export { Photo };
 
 const whatsapp = socials.find((social) => social.name === "WhatsApp")!;
 
@@ -123,5 +126,40 @@ export function PageHero({
       <p className="mt-4 max-w-md text-base text-wine/85 md:text-lg">{intro}</p>
       {children && <div className="mt-6 flex flex-wrap gap-3">{children}</div>}
     </div>
+  );
+}
+
+// Photo on one side, text on the other; `reverse` swaps the sides on desktop so a list of rows alternates.
+export function FeatureRow({
+  id,
+  photo,
+  number,
+  title,
+  text,
+  reverse = false,
+  children,
+}: {
+  id?: string;
+  photo: PhotoId;
+  number?: number;
+  title: string;
+  text: string;
+  reverse?: boolean;
+  children?: React.ReactNode;
+}) {
+  return (
+    <article id={id} className="grid scroll-mt-28 items-center gap-6 md:grid-cols-2 md:gap-14">
+      <div className={cn("rounded-[2rem] bg-card p-3", cardShadow, reverse && "md:order-2")}>
+        <Photo id={photo} sizes="(min-width: 768px) 32rem, 100vw" className="aspect-4/3 rounded-[1.5rem]" />
+      </div>
+      <div>
+        {number !== undefined && (
+          <span className="text-sm font-semibold text-rose-foreground">{String(number).padStart(2, "0")}</span>
+        )}
+        <h3 className="mt-2 text-2xl font-bold text-wine md:text-3xl">{title}</h3>
+        <p className="mt-3 max-w-md leading-relaxed text-foreground/75">{text}</p>
+        {children}
+      </div>
+    </article>
   );
 }

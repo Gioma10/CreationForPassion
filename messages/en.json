@@ -6,7 +6,9 @@
   "common": {
     "whatsappCta": "Message us on WhatsApp",
     "howWeWork": "How our creations come to life",
-    "close": "Close"
+    "close": "Close",
+    "seeCreations": "See the creations",
+    "allHandmade": "All handmade"
   },
   "nav": {
     "label": "Main navigation",
@@ -16,7 +18,9 @@
     "links": {
       "allestimenti": "Event styling",
       "fattoAMano": "Handmade",
-      "eventi": "Events",
+      "bomboniere": "Wedding favours",
+      "candeleGesso": "Candles and plaster",
+      "gadgetPersonalizzati": "Personalised gifts",
       "prodottiDigitali": "Digital products",
       "chiSiamo": "About us",
       "comeLavoriamo": "How it starts"
@@ -47,21 +51,21 @@
         "title": "Handmade",
         "description": "Favours, candles and plaster: creations made one at a time in our workshop."
       },
-      "eventi": {
-        "title": "Events",
-        "description": "Gender reveals, baby showers and last-minute favours: the parties that moved us."
+      "prodottiDigitali": {
+        "title": "Digital products",
+        "description": "Digital invitations, landing pages for weddings and events and QR codes for restaurants, with a handmade touch."
       }
     }
   },
   "allestimenti": {
     "meta": {
       "title": "Event styling in Catania",
-      "description": "Weddings, christenings, communions, birthdays and parties in Catania: a collection of the setups we've created, with photos and details."
+      "description": "Weddings, christenings, communions, birthdays, gender reveals and baby showers in Catania: a collection of the setups we've created, with photos and details."
     },
     "hero": {
       "eyebrow": "Event styling in Catania",
       "title": "The parties we've styled",
-      "intro": "Weddings, christenings, communions, birthdays: every setup started from a story, a colour palette and lots of small details. Here are a few of them."
+      "intro": "Weddings, christenings, birthdays, gender reveals and baby showers: every setup started from a story, a colour palette and lots of small details. Here are a few of them."
     },
     "occasions": {
       "eyebrow": "The occasions",
@@ -78,6 +82,14 @@
         "compleanni": {
           "title": "Birthdays and parties",
           "text": "Themed setups for every age, from a first birthday to parties with friends."
+        },
+        "genderReveal": {
+          "title": "Gender reveal",
+          "text": "Pink or blue? A setup, balloons and a surprise prepared to reveal it to everyone at the most exciting moment."
+        },
+        "babyShower": {
+          "title": "Baby shower",
+          "text": "A sweet party to welcome the new arrival: decorations, a dessert table and little gifts for the guests."
         }
       }
     },
@@ -118,17 +130,21 @@
     "cta": {
       "title": "Did something catch your eye?",
       "text": "Message us on WhatsApp: we always love telling the story behind a setup or hearing your idea."
+    },
+    "balloons": {
+      "title": "Balloon arrangements by a certified expert",
+      "text": "Our balloon arrangements are created by an expert certified in balloon art: shapes, colours and proportions designed to make balloons the heart of the setup."
     }
   },
   "fattoAMano": {
     "meta": {
       "title": "Handmade creations",
-      "description": "Wedding favours, candles and plaster, balloon arrangements and personalised pieces: the handmade creations from our workshop in Catania."
+      "description": "Wedding favours, candles and plaster and personalised gifts: the handmade creations from our workshop in Catania."
     },
     "hero": {
       "eyebrow": "Made by hand",
       "title": "Handmade creations that tell a story",
-      "intro": "Wedding favours, candles and plaster, balloon arrangements and personalised pieces: each one is made by hand, slowly and with care. Here we collect the ones closest to our hearts."
+      "intro": "Wedding favours, candles and plaster and personalised gifts: each one is made by hand, slowly and with care. Here we collect the ones closest to our hearts."
     },
     "promises": {
       "handmade": {
@@ -156,12 +172,8 @@
           "title": "Candles and plaster",
           "text": "Handmade candles and plaster pieces, to give as gifts, keep at home or turn into favours."
         },
-        "palloncini": {
-          "title": "Balloon arrangements",
-          "text": "Balloon arches and arrangements for parties and special days, each time in new colours and shapes."
-        },
         "gadget": {
-          "title": "Personalised pieces",
+          "title": "Personalised gifts",
           "text": "Pieces with names, dates or initials, made as gifts or as keepsakes of a special day."
         }
       }
@@ -175,9 +187,6 @@
       "gesso": "Plaster",
       "bomboniere": "Favours",
       "regali": "Gifts",
-      "compleanni": "Birthdays",
-      "feste": "Parties",
-      "ricorrenze": "Special days",
       "eventi": "Events",
       "personalizzati": "Personalised"
     },
@@ -199,49 +208,123 @@
       "text": "Message us on WhatsApp: we'd love to tell you how it came to life or hear your idea."
     }
   },
-  "eventi": {
+  "bomboniere": {
     "meta": {
-      "title": "Events",
-      "description": "Gender reveals, baby showers and last-minute favours: the parties we've prepared and that moved us."
+      "title": "Handmade wedding favours",
+      "description": "Handmade favours for weddings, christenings, communions and graduations, express ones too: small keepsakes matched to the style of the party."
     },
     "hero": {
-      "eyebrow": "Events",
-      "title": "The parties that moved us",
-      "intro": "From the surprise of a gender reveal to the sweetness of a baby shower, to favours made in a rush: some of the parties that stayed in our hearts."
+      "eyebrow": "Handmade · Favours",
+      "title": "Handmade favours, one for every guest",
+      "intro": "Small keepsakes to take home after the party: we make our favours by hand, one at a time, in the colours and style of the occasion. And when time is short, there are the express ones."
     },
-    "items": {
-      "genderReveal": {
-        "title": "Gender reveal",
-        "text": "Pink or blue? A setup, balloons and a surprise prepared to reveal it to everyone at the most exciting moment."
+    "heading": {
+      "eyebrow": "Our favours",
+      "title": "From classic to express"
+    },
+    "rows": {
+      "classiche": {
+        "title": "Classic favours",
+        "text": "For weddings, christenings, communions and graduations: figurines, little boxes and sugared almonds, matched to the setup and tied with the right ribbon."
       },
-      "babyShower": {
-        "title": "Baby shower",
-        "text": "A sweet party to welcome the new arrival: decorations, a dessert table and little gifts for the guests."
+      "gesso": {
+        "title": "Plaster and candle favours",
+        "text": "Jars, little pots and small plaster pieces, or scented candles: favours to keep at home that bring back the party every day."
       },
-      "bomboniereExpress": {
-        "title": "Last-minute favours",
-        "text": "Sometimes the best ideas come in a rush: handmade favours finished in a few days, with the same care as all the others."
+      "express": {
+        "title": "Express favours",
+        "text": "Some parties come together in a few days: express favours are handmade in a rush, matched to the party's colours and wrapped one by one, with the same care as all the others."
       }
     },
     "cta": {
-      "title": "Thinking about a party too?",
-      "text": "Message us on WhatsApp: we'd love to hear your idea and share ours."
+      "title": "Did you like a favour?",
+      "text": "Message us on WhatsApp: we'd love to tell you how it came to life or hear your idea."
+    }
+  },
+  "candeleGesso": {
+    "meta": {
+      "title": "Handmade candles and plaster",
+      "description": "Candles, plaster pieces and dried flower arrangements, handmade in our workshop in Catania."
+    },
+    "hero": {
+      "eyebrow": "Handmade · Candles and plaster",
+      "title": "Candles and plaster, scents and dried flowers",
+      "intro": "Hand-poured candles, plaster pieces and small dried flower arrangements: creations to give as gifts, keep at home or turn into favours."
+    },
+    "heading": {
+      "eyebrow": "From the workshop",
+      "title": "What we make with wax and plaster"
+    },
+    "rows": {
+      "candele": {
+        "title": "Candles",
+        "text": "Candles in glass and candles in unusual shapes, like succulents, with labels and ribbons chosen each time."
+      },
+      "gesso": {
+        "title": "Plaster pieces",
+        "text": "Watering cans, jars and little pots in white plaster, decorated with dried flowers, hydrangeas and small details."
+      },
+      "fiori": {
+        "title": "Decorative flower arrangements",
+        "text": "Arrangements with handmade decorative flowers, dried flowers and leaves, made as gifts or centrepieces."
+      }
+    },
+    "cta": {
+      "title": "Did you like a creation?",
+      "text": "Message us on WhatsApp: we'd love to tell you how it came to life or hear your idea."
+    }
+  },
+  "gadgetPersonalizzati": {
+    "meta": {
+      "title": "Handmade personalised gifts",
+      "description": "Personalised gifts with names, dates and initials: plexiglass, wood and gift wrapping handmade in our workshop in Catania."
+    },
+    "hero": {
+      "eyebrow": "Handmade · Personalised gifts",
+      "title": "Personalised gifts, with a name on them",
+      "intro": "A name, a date, an initial: a few details are enough to turn an object into a keepsake. Here we collect the personalised gifts born in our workshop."
+    },
+    "heading": {
+      "eyebrow": "From the workshop",
+      "title": "Small pieces, all different"
+    },
+    "rows": {
+      "plexiglass": {
+        "title": "Plexiglass",
+        "text": "Trees, plaques and decorations in plexiglass with names and hearts, like the end-of-year gift for a teacher."
+      },
+      "legno": {
+        "title": "Wood and keyrings",
+        "text": "Keyrings and small wooden pieces personalised with names, initials and dates."
+      },
+      "confezioni": {
+        "title": "Wrapping and cards",
+        "text": "Boxes, ribbons, cards and tags made to go with every gift, cut and wrapped by hand."
+      }
+    },
+    "cta": {
+      "title": "Did you like a gift?",
+      "text": "Message us on WhatsApp: we'd love to tell you how it came to life or hear your idea."
     }
   },
   "prodottiDigitali": {
     "meta": {
       "title": "Digital products: invitations and QR codes",
-      "description": "Digital invitations for weddings, birthdays and christenings and QR codes for restaurants, bars and events, in the same style as our handmade creations."
+      "description": "Digital invitations for weddings, birthdays and christenings, landing pages for weddings and events and QR codes for restaurants and venues, in the style of our handmade creations."
     },
     "hero": {
       "eyebrow": "Digital products",
-      "title": "Invitations and QR codes, made with handmade care",
-      "intro": "Not everything starts with paper, ribbons and plaster: some creations we design for the screen. Invitations you send with a message and QR codes that take your guests wherever you want."
+      "title": "Digital creations, made with handmade care",
+      "intro": "Not everything starts with paper, ribbons and plaster: some creations we design for the screen. Invitations you send with a message, web pages for your party and QR codes that take your guests wherever you want."
     },
     "items": {
       "inviti": {
         "title": "Digital invitations",
         "text": "Invitations for weddings, birthdays and christenings to share on WhatsApp or by email, in the colours and style of the party. Matched to the setup, if you like."
+      },
+      "landing": {
+        "title": "Landing pages for weddings and events",
+        "text": "A web page just for your celebration: schedule, venue with a map, RSVP and gift list, in the same style as the invitations."
       },
       "qrCode": {
         "title": "QR codes for restaurants and venues",
@@ -257,7 +340,7 @@
       "eventi": "Events"
     },
     "cta": {
-      "title": "Need an invitation or a QR code?",
+      "title": "Need something digital?",
       "text": "Message us on WhatsApp: tell us your idea and we'll design it together."
     }
   },
@@ -454,5 +537,11 @@
   },
   "language": {
     "label": "Language"
+  },
+  "digitalIllustration": {
+    "names": "Giulia & Marco",
+    "saveTheDate": "Save the date",
+    "rsvp": "RSVP",
+    "menu": "MENU"
   }
 }

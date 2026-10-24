@@ -20,21 +20,38 @@ export const socials = [
 
 export type SocialName = (typeof socials)[number]["name"];
 
-// `key` names the label under `nav.links` in messages.
+type NavLink = { href: string; key: string };
+
+// `key` names the label under `nav.links` in messages; `children` open as a submenu under their parent.
 export const navLinks = [
   { href: "/allestimenti", key: "allestimenti" },
-  { href: "/fatto-a-mano", key: "fattoAMano" },
-  { href: "/eventi", key: "eventi" },
+  {
+    href: "/fatto-a-mano",
+    key: "fattoAMano",
+    children: [
+      { href: "/fatto-a-mano/bomboniere", key: "bomboniere" },
+      { href: "/fatto-a-mano/candele-e-gesso", key: "candeleGesso" },
+      { href: "/fatto-a-mano/gadget-personalizzati", key: "gadgetPersonalizzati" },
+    ],
+  },
   { href: "/prodotti-digitali", key: "prodottiDigitali" },
   { href: "/chi-siamo", key: "chiSiamo" },
   { href: "/come-lavoriamo", key: "comeLavoriamo" },
-] as const;
+] as const satisfies readonly (NavLink & { children?: readonly NavLink[] })[];
 
-// `key` names the card copy under `home.services` in messages.
+// Every page reachable from the menu, submenus included.
+type TopLink = (typeof navLinks)[number];
+type SubLink = Extract<TopLink, { children: unknown }>["children"][number];
+
+export const pages = navLinks.flatMap((link): (TopLink | SubLink)[] =>
+  "children" in link ? [link, ...link.children] : [link],
+);
+
+// `key` names the card copy under `home.services` in messages. A service without a photo shows the digital illustration.
 export const services = [
   { key: "allestimenti", href: "/allestimenti", photo: "battesimoAzzurro" },
   { key: "fattoAMano", href: "/fatto-a-mano", photo: "borsetta" },
-  { key: "eventi", href: "/eventi", photo: "arcoAzzurroPampas" },
-] as const satisfies readonly { key: string; href: string; photo: PhotoId }[];
+  { key: "prodottiDigitali", href: "/prodotti-digitali" },
+] as const satisfies readonly { key: string; href: string; photo?: PhotoId }[];
 
 export type Service = (typeof services)[number];

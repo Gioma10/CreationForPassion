@@ -10,6 +10,7 @@ import { Draggable } from "gsap/Draggable";
 import { Flip } from "gsap/Flip";
 import { useGSAP } from "@gsap/react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { DigitalIllustration } from "@/components/digital-illustration";
 import { Button } from "@/components/ui/button";
 import { HOME_RESET_EVENT } from "@/lib/home-reset";
 import { cn } from "@/lib/utils";
@@ -351,15 +352,19 @@ function ServiceCard({
   const face = (
     <>
       <div className="relative min-h-0 flex-1 overflow-hidden rounded-[6cqw] bg-blush">
-        <Image
-          src={photos[service.photo]}
-          alt={tPhotos(service.photo)}
-          fill
-          placeholder="blur"
-          sizes="(min-width: 768px) 24rem, 72vw"
-          draggable={false}
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-        />
+        {"photo" in service ? (
+          <Image
+            src={photos[service.photo]}
+            alt={tPhotos(service.photo)}
+            fill
+            placeholder="blur"
+            sizes="(min-width: 768px) 24rem, 72vw"
+            draggable={false}
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+          />
+        ) : (
+          <DigitalIllustration className="size-full p-[5cqw] transition-transform duration-500 ease-out group-hover:scale-110" />
+        )}
       </div>
       <div className="flex shrink-0 flex-col px-[3cqw] pt-[5cqw] pb-[3cqw]">
         <h3 className="text-[7cqw] leading-tight font-bold text-wine">{t(`services.${service.key}.title`)}</h3>

@@ -5,17 +5,16 @@ import { use } from "react";
 import { setRequestLocale } from "next-intl/server";
 import {
   CtaBand,
+  FeatureRow,
   OutlineLink,
   PageHero,
   PageShell,
   Photo,
   SectionHeading,
   WhatsAppButton,
-  cardShadow,
 } from "@/components/page-parts";
 import { pageMetadata } from "@/i18n/metadata";
 import type { PhotoId } from "@/lib/photos";
-import { cn } from "@/lib/utils";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/fatto-a-mano">): Promise<Metadata> {
   const { locale } = await params;
@@ -32,17 +31,23 @@ const promises = [
 const categories = [
   {
     key: "bomboniere",
+    href: "/fatto-a-mano/bomboniere",
     tags: ["matrimoni", "battesimi", "comunioni", "lauree"],
     photo: "bomboniereSposi",
   },
-  { key: "candele", tags: ["candele", "gesso", "bomboniere", "regali"], photo: "barattoloGesso" },
   {
-    key: "palloncini",
-    tags: ["compleanni", "feste", "ricorrenze"],
-    photo: "palloncini18",
+    key: "candele",
+    href: "/fatto-a-mano/candele-e-gesso",
+    tags: ["candele", "gesso", "bomboniere", "regali"],
+    photo: "barattoloGesso",
   },
-  { key: "gadget", tags: ["regali", "eventi", "personalizzati"], photo: "alberoPlexiglass" },
-] as const satisfies readonly { key: string; tags: readonly string[]; photo: PhotoId }[];
+  {
+    key: "gadget",
+    href: "/fatto-a-mano/gadget-personalizzati",
+    tags: ["regali", "eventi", "personalizzati"],
+    photo: "alberoPlexiglass",
+  },
+] as const satisfies readonly { key: string; href: string; tags: readonly string[]; photo: PhotoId }[];
 
 const customOptions = ["nomi", "date", "colori", "materiali", "biglietti", "confezione"] as const;
 
@@ -103,35 +108,28 @@ export default function FattoAManoPage({ params }: PageProps<"/[locale]/fatto-a-
       <section className="flex flex-col gap-12 md:gap-16">
         <SectionHeading eyebrow={t("categories.eyebrow")} title={t("categories.title")} />
         {categories.map((category, i) => (
-          <article
+          <FeatureRow
             key={category.key}
-            className="grid items-center gap-6 md:grid-cols-2 md:gap-14"
+            photo={category.photo}
+            number={i + 1}
+            title={t(`categories.items.${category.key}.title`)}
+            text={t(`categories.items.${category.key}.text`)}
+            reverse={i % 2 === 1}
           >
-            <div className={cn("rounded-[2rem] bg-card p-3", cardShadow, i % 2 === 1 && "md:order-2")}>
-              <Photo
-                id={category.photo}
-                sizes="(min-width: 768px) 32rem, 100vw"
-                className="aspect-4/3 rounded-[1.5rem]"
-              />
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {category.tags.map((tag) => (
+                <li
+                  key={tag}
+                  className="rounded-full border border-wine/15 px-3 py-1 text-xs font-semibold text-wine"
+                >
+                  {t(`tags.${tag}`)}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6">
+              <OutlineLink href={category.href}>{tCommon("seeCreations")}</OutlineLink>
             </div>
-            <div>
-              <span className="text-sm font-semibold text-rose-foreground">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="mt-2 text-2xl font-bold text-wine md:text-3xl">{t(`categories.items.${category.key}.title`)}</h3>
-              <p className="mt-3 max-w-md leading-relaxed text-foreground/75">{t(`categories.items.${category.key}.text`)}</p>
-              <ul className="mt-5 flex flex-wrap gap-2">
-                {category.tags.map((tag) => (
-                  <li
-                    key={tag}
-                    className="rounded-full border border-wine/15 px-3 py-1 text-xs font-semibold text-wine"
-                  >
-                    {t(`tags.${tag}`)}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </article>
+          </FeatureRow>
         ))}
       </section>
 

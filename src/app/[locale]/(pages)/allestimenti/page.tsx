@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Check } from "lucide-react";
+import { Award, Check } from "lucide-react";
 import { type Locale, useTranslations } from "next-intl";
 import { use } from "react";
 import { setRequestLocale } from "next-intl/server";
@@ -26,6 +26,8 @@ const occasions = [
   { key: "matrimoni", photo: "cameraSposa" },
   { key: "battesimi", photo: "battesimoAzzurro" },
   { key: "compleanni", photo: "compleanno10Corona" },
+  { key: "genderReveal", photo: "genderRevealBimbi" },
+  { key: "babyShower", photo: "babyShowerOrsetto" },
 ] as const satisfies readonly { key: string; photo: PhotoId }[];
 
 const gallery = [
@@ -96,6 +98,16 @@ export default function AllestimentiPage({ params }: PageProps<"/[locale]/allest
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className={`flex flex-col gap-5 rounded-[2rem] bg-card p-6 sm:flex-row sm:items-center md:p-8 ${cardShadow}`}>
+        <span className="grid size-14 shrink-0 place-items-center rounded-full bg-blush text-wine">
+          <Award className="size-7" />
+        </span>
+        <div>
+          <h2 className="text-xl leading-tight font-bold text-wine md:text-2xl">{t("balloons.title")}</h2>
+          <p className="mt-2 max-w-2xl leading-relaxed text-foreground/75">{t("balloons.text")}</p>
+        </div>
       </section>
 
       <section className="grid gap-10 rounded-[2rem] bg-blush p-8 md:grid-cols-[0.8fr_1.2fr] md:p-12">

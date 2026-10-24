@@ -8,7 +8,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Menu, X } from "lucide-react";
 import { NavLogo } from "@/components/header/NavLogo";
-import { navLinks } from "@/lib/site";
+import { navLinks, pages } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(useGSAP);
@@ -19,7 +19,7 @@ export function MobileNav({ showTitle, collapsed }: { showTitle: boolean; collap
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations("nav");
-  const current = navLinks.find((link) => link.href === pathname);
+  const current = pages.find((link) => link.href === pathname);
   const title = current && t(`links.${current.key}`);
   const root = useRef<HTMLDivElement>(null);
   const tl = useRef<gsap.core.Timeline>(null);
@@ -128,15 +128,28 @@ export function MobileNav({ showTitle, collapsed }: { showTitle: boolean; collap
         className="menu-panel pointer-events-auto invisible absolute top-full right-0 mt-3 w-[min(17rem,calc(100vw-2.5rem))] rounded-[1.75rem] bg-card p-2 opacity-0 shadow-[0_18px_40px_-20px_rgb(60_10_25/0.45)]"
       >
         {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            onClick={() => setOpen(false)}
-            aria-current={pathname === link.href ? "page" : undefined}
-            className="block rounded-full px-4 py-3 text-base font-semibold text-wine outline-none hover:bg-blush focus-visible:bg-blush aria-[current=page]:bg-blush"
-          >
-            {t(`links.${link.key}`)}
-          </Link>
+          <div key={link.href}>
+            <Link
+              href={link.href}
+              onClick={() => setOpen(false)}
+              aria-current={pathname === link.href ? "page" : undefined}
+              className="block rounded-full px-4 py-3 text-base font-semibold text-wine outline-none hover:bg-blush focus-visible:bg-blush aria-[current=page]:bg-blush"
+            >
+              {t(`links.${link.key}`)}
+            </Link>
+            {"children" in link &&
+              link.children.map((child) => (
+                <Link
+                  key={child.href}
+                  href={child.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={pathname === child.href ? "page" : undefined}
+                  className="ml-4 block rounded-full px-4 py-2 text-sm font-medium text-wine/80 outline-none hover:bg-blush focus-visible:bg-blush aria-[current=page]:bg-blush aria-[current=page]:text-wine"
+                >
+                  {t(`links.${child.key}`)}
+                </Link>
+              ))}
+          </div>
         ))}
       </nav>
     </div>
