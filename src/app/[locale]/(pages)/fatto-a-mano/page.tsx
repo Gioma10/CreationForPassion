@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hand, Palette, Truck } from "lucide-react";
+import { Hand, Heart, Palette } from "lucide-react";
 import { type Locale, useTranslations } from "next-intl";
 import { use } from "react";
 import { setRequestLocale } from "next-intl/server";
@@ -17,16 +17,16 @@ import { pageMetadata } from "@/i18n/metadata";
 import type { PhotoId } from "@/lib/photos";
 import { cn } from "@/lib/utils";
 
-export async function generateMetadata({ params }: PageProps<"/[locale]/artigianato">): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps<"/[locale]/fatto-a-mano">): Promise<Metadata> {
   const { locale } = await params;
-  return pageMetadata(locale as Locale, "artigianato", "/artigianato");
+  return pageMetadata(locale as Locale, "fattoAMano", "/fatto-a-mano");
 }
 
 // TODO: have the owner review this copy; it is a first draft built from the site descriptions.
 const promises = [
   { key: "handmade", icon: Hand },
   { key: "custom", icon: Palette },
-  { key: "shipping", icon: Truck },
+  { key: "stories", icon: Heart },
 ] as const;
 
 const categories = [
@@ -46,9 +46,9 @@ const categories = [
 
 const customOptions = ["nomi", "date", "colori", "materiali", "biglietti", "confezione"] as const;
 
-export default function ArtigianatoPage({ params }: PageProps<"/[locale]/artigianato">) {
+export default function FattoAManoPage({ params }: PageProps<"/[locale]/fatto-a-mano">) {
   setRequestLocale(use(params).locale as Locale);
-  const t = useTranslations("artigianato");
+  const t = useTranslations("fattoAMano");
   const tCommon = useTranslations("common");
   return (
     <PageShell>

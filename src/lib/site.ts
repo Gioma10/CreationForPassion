@@ -6,9 +6,8 @@ export const site = {
   // TODO: replace with the real domain before going live (used for canonical URLs, sitemap, Open Graph).
   url: "https://www.creationforpassion.it",
   city: "Catania",
-  // TODO: replace with the real owner's full name and privacy contact email (shown on /privacy).
-  owner: "Nome Cognome",
-  email: "info@creationforpassion.it",
+  owner: "Cristina Musumarra",
+  email: "crianfuso84@gmail.com",
 } as const;
 
 // TODO: replace the placeholder handles and WhatsApp number.
@@ -24,7 +23,7 @@ export type SocialName = (typeof socials)[number]["name"];
 // `key` names the label under `nav.links` in messages.
 export const navLinks = [
   { href: "/allestimenti", key: "allestimenti" },
-  { href: "/artigianato", key: "artigianato" },
+  { href: "/fatto-a-mano", key: "fattoAMano" },
   { href: "/eventi", key: "eventi" },
   { href: "/chi-siamo", key: "chiSiamo" },
   { href: "/come-lavoriamo", key: "comeLavoriamo" },
@@ -33,7 +32,7 @@ export const navLinks = [
 // `key` names the card copy under `home.services` in messages.
 export const services = [
   { key: "allestimenti", href: "/allestimenti", photo: "battesimoAzzurro" },
-  { key: "artigianato", href: "/artigianato", photo: "borsetta" },
+  { key: "fattoAMano", href: "/fatto-a-mano", photo: "borsetta" },
   { key: "eventi", href: "/eventi", photo: "arcoAzzurroPampas" },
 ] as const satisfies readonly { key: string; href: string; photo: PhotoId }[];
 
