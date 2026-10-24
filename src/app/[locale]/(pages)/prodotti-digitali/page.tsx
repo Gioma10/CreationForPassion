@@ -42,7 +42,7 @@ export default function ProdottiDigitaliPage({ params }: PageProps<"/[locale]/pr
           <OutlineLink href="/come-lavoriamo">{tCommon("howWeWork")}</OutlineLink>
         </PageHero>
 
-        <div className="rounded-[2rem] bg-blush p-6 max-md:hidden">
+        <div className="rounded-[2rem] bg-blush p-4 md:p-6">
           <DigitalIllustration className="w-full" />
         </div>
       </section>
